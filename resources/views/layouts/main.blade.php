@@ -77,11 +77,11 @@
               </ul>
               <div class="group-md group-middle social-items">
                 <a class="icon icon-md novi-icon mdi mdi-whatsapp" href="https://wa.me/447481355570" target="_blank"></a>
-                <a class="icon icon-md novi-icon mdi mdi-facebook" href="#"></a>
-                <a class="icon icon-md novi-icon mdi mdi-twitter" href="#"></a>
+                <a class="icon icon-md novi-icon mdi mdi-facebook" href="https://www.facebook.com/Mintaccountax" target="_blank"></a>
+                {{-- <a class="icon icon-md novi-icon mdi mdi-twitter" href="#"></a> --}}
                 <a class="icon icon-md novi-icon mdi mdi-instagram" href="#"></a>
-                <a class="icon icon-md novi-icon mdi mdi-facebook-messenger" href="#"></a>
-                <a class="icon icon-md novi-icon mdi mdi-linkedin" href="#"></a>
+                {{-- <a class="icon icon-md novi-icon mdi mdi-facebook-messenger" href="#"></a> --}}
+                <a class="icon icon-md novi-icon mdi mdi-linkedin" href="https://www.linkedin.com/company/mint-accountax/" target="_blank"></a>
               </div>
             </div>
           </div>
