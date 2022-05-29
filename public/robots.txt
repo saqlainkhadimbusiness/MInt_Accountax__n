@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /payments
+Disallow: /*?page=
+Disallow: /blog*?page=
+Disallow: /blog/*?page=

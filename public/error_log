@@ -1,0 +1,30 @@
+[13-Sep-2019 14:19:30 UTC] PHP Warning:  include(/home/mintacco/vendor/composer/../../app/Http/Kernel.php): failed to open stream: No such file or directory in /home/mintacco/vendor/composer/ClassLoader.php on line 444
+[13-Sep-2019 14:19:30 UTC] PHP Warning:  include(/home/mintacco/vendor/composer/../../app/Http/Kernel.php): failed to open stream: No such file or directory in /home/mintacco/vendor/composer/ClassLoader.php on line 444
+[13-Sep-2019 14:19:30 UTC] PHP Warning:  include(): Failed opening '/home/mintacco/vendor/composer/../../app/Http/Kernel.php' for inclusion (include_path='.:/opt/cpanel/ea-php72/root/usr/share/pear') in /home/mintacco/vendor/composer/ClassLoader.php on line 444
+[13-Sep-2019 14:19:30 UTC] PHP Fatal error:  Uncaught ReflectionException: Class App\Http\Kernel does not exist in /home/mintacco/vendor/laravel/framework/src/Illuminate/Container/Container.php:790
+Stack trace:
+#0 /home/mintacco/vendor/laravel/framework/src/Illuminate/Container/Container.php(790): ReflectionClass->__construct('App\\Http\\Kernel')
+#1 /home/mintacco/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build('App\\Http\\Kernel')
+#2 /home/mintacco/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve('App\\Http\\Kernel', Array, false)
+#3 /home/mintacco/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\Container\Container->Illuminate\Container\{closure}(Object(Illuminate\Foundation\Application), Array)
+#4 /home/mintacco/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build(Object(Closure))
+#5 /home/mintacco/vendor/laravel/framework/src/Illuminate/Containe in /home/mintacco/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 790
+[26-Dec-2019 22:45:50 UTC] PHP Fatal error:  Interface 'JsonSerializable' not found in /home2/mintacco/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 40
+[26-Dec-2019 23:56:18 UTC] PHP Fatal error:  Interface 'JsonSerializable' not found in /home2/mintacco/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 40
+[27-Dec-2019 01:04:45 UTC] PHP Fatal error:  Interface 'JsonSerializable' not found in /home2/mintacco/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 40
+[27-Dec-2019 01:26:34 UTC] PHP Fatal error:  Interface 'JsonSerializable' not found in /home2/mintacco/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 40
+[27-Dec-2019 02:09:45 UTC] PHP Fatal error:  Interface 'JsonSerializable' not found in /home2/mintacco/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 40
+[27-Dec-2019 02:10:52 UTC] PHP Fatal error:  Interface 'JsonSerializable' not found in /home2/mintacco/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 40
+[27-Dec-2019 03:07:09 UTC] PHP Fatal error:  Interface 'JsonSerializable' not found in /home2/mintacco/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 40
+[27-Dec-2019 03:14:50 UTC] PHP Fatal error:  Interface 'JsonSerializable' not found in /home2/mintacco/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 40
+[27-Dec-2019 04:17:02 UTC] PHP Fatal error:  Interface 'JsonSerializable' not found in /home2/mintacco/vendor/laravel/framework/src/Illuminate/Support/Collection.php on line 40
+[08-Oct-2021 10:45:05 America/New_York] PHP Warning:  include(/home/mintpoda/mintaccountax.co.uk/vendor/composer/../../app/Http/Kernel.php): failed to open stream: No such file or directory in /home/mintpoda/mintaccountax.co.uk/vendor/composer/ClassLoader.php on line 444
+[08-Oct-2021 10:45:05 America/New_York] PHP Warning:  include(/home/mintpoda/mintaccountax.co.uk/vendor/composer/../../app/Http/Kernel.php): failed to open stream: No such file or directory in /home/mintpoda/mintaccountax.co.uk/vendor/composer/ClassLoader.php on line 444
+[08-Oct-2021 10:45:05 America/New_York] PHP Warning:  include(): Failed opening '/home/mintpoda/mintaccountax.co.uk/vendor/composer/../../app/Http/Kernel.php' for inclusion (include_path='.:/opt/alt/php72/usr/share/pear') in /home/mintpoda/mintaccountax.co.uk/vendor/composer/ClassLoader.php on line 444
+[08-Oct-2021 10:45:05 America/New_York] PHP Fatal error:  Uncaught ReflectionException: Class App\Http\Kernel does not exist in /home/mintpoda/mintaccountax.co.uk/vendor/laravel/framework/src/Illuminate/Container/Container.php:790
+Stack trace:
+#0 /home/mintpoda/mintaccountax.co.uk/vendor/laravel/framework/src/Illuminate/Container/Container.php(790): ReflectionClass->__construct('App\\Http\\Kernel')
+#1 /home/mintpoda/mintaccountax.co.uk/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): Illuminate\Container\Container->build('App\\Http\\Kernel')
+#2 /home/mintpoda/mintaccountax.co.uk/vendor/laravel/framework/src/Illuminate/Container/Container.php(265): Illuminate\Container\Container->resolve('App\\Http\\Kernel', Array, false)
+#3 /home/mintpoda/mintaccountax.co.uk/vendor/laravel/framework/src/Illuminate/Container/Container.php(787): Illuminate\Container\Container->Illuminate\Container\{closure}(Object(Illuminate\Foundation\Application), Array)
+#4 /home/mintpoda/mintaccountax.co.uk/vendor/laravel/framework/src/Illuminate/Container/Container.php(667): I in /home/mintpoda/mintaccountax.co.uk/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 790
