@@ -87,7 +87,8 @@ affordable prices. Hurry Up, save your taxes now and grow your business in UK.')
    <div class="container">
       <div class="block-lg text-center">
          <h2>Our Services</h2>
-         <p>{{$data->services_content}}</p>
+          <?php $lorem='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.';?>
+         <p>{{isset($data->services_content)?$data->services_content:$lorem}}</p>
        
       </div>
     
@@ -188,7 +189,7 @@ affordable prices. Hurry Up, save your taxes now and grow your business in UK.')
       </div>
    </div>
 </section>
-@if(count($reviews)>0)
+@if( isset($reviews) && count($reviews)>0)
 <section class="section section-lg bg-gray-100">
    <div class="container text-center">
       <h2>Testimonials</h2>
@@ -199,34 +200,23 @@ affordable prices. Hurry Up, save your taxes now and grow your business in UK.')
             <blockquote class="quote quote-boxed">
             <div class="quote-meta">
                <ul class="list-icons">
+                   @for($i=$review->rating;$i<=5;$i++)
                   <li>
                      <div class="icon mdi mdi-star"></div>
                   </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star-half"></div>
-                  </li>
+                   @endfor
                </ul>
-               <div class="time">2 days ago</div>
+               <div class="time">{{ $review->created_at->diffForHumans() }}</div>
             </div>
-            <q>“The service from Accountex has been excellent and is faultless. They give us the reassurance to know we
-               are complying with the rules and regulations and the team is brilliant at getting back to us.”</q>
+            <q>“{{substr($review->review_message, 0, 250) .  ((count_chars($review->review_message)  > 250)?'....':'') }}”</q>
             <div class="quote-author">
-               <div class="author-media"><img src="images/user-1-64x64.jpg" alt="" width="64" height="64" />
+               <div class="author-media"><img src="review_images/{{ $review->user_image }}" alt="{{ $review->user_image_alt }}" width="64" height="64" />
                </div>
                <div class="author-body">
                   <div class="author">
-                     <cite>Marie Hanson</cite>
+                     <cite>{{ $review->person_name }}</cite>
                   </div>
-                  <div class="position">Co-Founder and CTO, “Smith &amp; Hanson”</div>
+                  <div class="position">{{ $review->position_in_company }}, “”</div>
                </div>
             </div>
          </blockquote>

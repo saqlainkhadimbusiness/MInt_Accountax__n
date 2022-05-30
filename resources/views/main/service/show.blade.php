@@ -69,6 +69,44 @@
         </form>
       @endauth
 
+        @if( isset($reviews) && count($reviews)>0)
+            <section class="section section-lg bg-gray-100">
+                <div class="container text-center">
+                    <h2>Testimonials</h2>
+                    <!-- Owl Carousel-->
+                    <div class="owl-carousel text-left" data-items="1" data-md-items="2" data-dots="true" data-nav="false"
+                         data-stage-padding="0" data-loop="true" data-margin="30" data-mouse-drag="false" data-autoplay="true">
+                        @foreach($reviews as  $review)
+                            <blockquote class="quote quote-boxed">
+                                <div class="quote-meta">
+                                    <ul class="list-icons">
+                                        @for($i=$review->rating;$i<=5;$i++)
+                                            <li>
+                                                <div class="icon mdi mdi-star"></div>
+                                            </li>
+                                        @endfor
+                                    </ul>
+                                    <div class="time">{{ $review->created_at->diffForHumans() }}</div>
+                                </div>
+                                <q>“{{substr($review->review_message, 0, 250) .  ((count_chars($review->review_message)  > 250)?'....':'') }}”</q>
+                                <div class="quote-author">
+                                    <div class="author-media"><img src="review_images/{{ $review->user_image }}" alt="{{ $review->user_image_alt }}" width="64" height="64" />
+                                    </div>
+                                    <div class="author-body">
+                                        <div class="author">
+                                            <cite>{{ $review->person_name }}</cite>
+                                        </div>
+                                        <div class="position">{{ $review->position_in_company }}, “”</div>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        @endforeach
+                    </div>
+                </div>
+            </section>
+        @endif
+
+
       @guest
           <h3 style="text-align: center;"><a href="{{ route('login') }}">Login</a> to buy this service.</h3>
       @endguest

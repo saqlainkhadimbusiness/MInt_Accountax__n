@@ -20,8 +20,14 @@ class ReviewController extends Controller
     public function  create(){
         return view('admin.reviews.create');
     }
-     public function  store(){
-        Review::create($request->all());
+     public function  store(Request $request){
+         $data=$request->all();
+         if(isset($request->image)&& $request->image){
+             $imageName =$data['user_image']= time().'.'.$request->image->extension();
+             $request->image->move(public_path('review_images'), $imageName);
+         }
+
+        Review::create($data);
         return redirect(route('admin.reviews.index'))->with('message', 'Record added successfully');
     }
 
@@ -30,7 +36,12 @@ class ReviewController extends Controller
     }
     public function update(Request $request, Review $review)
     {
-        $review->update($request->all());
+        $data=$request->all();
+        if(isset($request->image)&& $request->image){
+            $imageName =$data['user_image']= time().'.'.$request->image->extension();
+            $request->image->move(public_path('review_images'), $imageName);
+        }
+        $review->update($data);
         return redirect(route('admin.reviews.index'))->with('message', 'Record Updated successfully');
     }
 

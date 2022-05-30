@@ -44,7 +44,8 @@ class PageController extends Controller
     public function show($slug)
     {
     	if ($service = Service::whereSlug($slug)->first()) {
-            return view('main.service.show', compact('service'));
+            $reviews = Review::latest()->take(20)->get();
+            return view('main.service.show', compact('service','reviews'));
         }
 
         if ($resource = Resource::whereSlug($slug)->first()) {

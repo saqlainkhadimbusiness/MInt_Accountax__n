@@ -20,7 +20,7 @@ class CreateReviewsTable extends Migration
             $table->enum('rating',[1,2,3,4,5]);
             $table->string('position_in_company');
             $table->longText('review_message');
-            $table->longText('user_image')->nullable();
+            $table->longText('user_image')->default('deafult.png');
             $table->longText('user_image_alt')->nullable();
             $table->timestamps();
         });
