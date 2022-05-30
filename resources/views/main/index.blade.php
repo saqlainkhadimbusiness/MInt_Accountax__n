@@ -87,10 +87,10 @@ affordable prices. Hurry Up, save your taxes now and grow your business in UK.')
    <div class="container">
       <div class="block-lg text-center">
          <h2>Our Services</h2>
-         <p>Since the foundation of Mint Accountax, we have been the number 01 tax counseling and accounting company. A
-            huge variety of services and solutions we offer to our clients that are fit according to their business
-            administration.</p>
+         <p>{{$data->services_content}}</p>
+       
       </div>
+    
       <div class="row row-50 row-xxl-73">
          <div class="col-sm-6 col-md-4 wow fadeInLeft">
             <div class="blurb-image">
@@ -639,7 +639,41 @@ affordable prices. Hurry Up, save your taxes now and grow your business in UK.')
             Posts</a></div>
 
 </section>
+{{-- rfff --}}
+<section id="faqs">
+   <div class="container">
+       <div class="row">
+           <div class="col-lg-8 offset-lg-2">
+               <h1 class="text-center"><b>Q&A</b></h1>
+               <div class="accordion mt-5" id="accordionExample">
+                   <div class="card">
+                       <div class="card-header" id="headingone">
+                           <h2 class="clearfix mb-0">
+                               <span class="btn btn-link" data-toggle="collapse" data-target="#collapseone" aria-expanded="true"
+                               aria-controls="collapseone"><b style="color:green";>what is the session in laravel 8?</b>
+                           </span>
+                              <span class="btn btn-link"  data-toggle="collapse" data-target="#collapseone" aria-expanded="true"
+                              aria-controls="collapseone"><i style=" margin-left: 280px; color:green;
+                              font-size: 40px;" class="fa-solid fa-plus"id="setit" ></i>
+                          </span>
+                          
+                           </h2>
+                       </div>
+                       <div id="collapseone" class="collapse" aria-labelledby="headingone" data-parent="#accordionExample">
+                           <div class="card-body">
+                               In Laravel, session is a parameter passing mechanism which enable us to store data across multiple requests.
+                               Session allows us to keep track of visitor across application. Laravel uses a driver based system for session management,
+                               each of the driver is used to define where the session data will be stored.
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
 
+{{-- rffend --}}
 <section class="section section-lg bg-default">
    <div class="container">
       <h2 class="text-center">Get in Touch</h2>

@@ -67,5 +67,10 @@ Route::group(['middleware' => 'auth'], function() {
 		Route::resource('quotes', 'Admin\QuoteController', ['except' => [ 'show', 'create', 'store', 'edit', 'update' ]]);
 		Route::resource('payments', 'Admin\PaymentController', ['except' => [ 'show' ]]);
 		Route::resource('manual-payments', 'Admin\ManualPaymentController', ['except' => [ 'show' ]]);
+		Route::resource('home', 'Admin\HomeController', ['except' => [ 'show' ]]);
+		// Route::get('home', 'Admin\HomeController', ['except' => [ 'store' ]]);
+		
 	});
+
+
 });

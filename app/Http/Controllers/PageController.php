@@ -8,16 +8,18 @@ use App\Article;
 use App\Service;
 use App\Resource;
 use App\ManualPayment;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function index()
     {
+        $data=DB::table('homes')->where("id",1)->first();
         $articles = Article::latest()->take(3)->get();
         $services = Service::latest()->take(20)->get();
 
-        return view('main.index', compact('articles', 'services'));
+        return view('main.index', compact('articles', 'services','data'));
     }
 
     public function about()

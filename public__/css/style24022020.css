@@ -13962,3 +13962,55 @@ img.mfp-img {
 .content-page p {font-size:16px; font-family:'verdana'}
 .content-page ul li ,.content-page ol li {list-style:disc !important; font-family:'verdana';display: flow-root list-item;
 margin-left: 15px;}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#faqs{
+    background-color: whitesmoke;
+    height: 100%;
+    padding: 50px 0;
+}
+#faqs h1{
+    font-weight:900;
+    font-size: 34px;
+    text-align: center;
+    padding: 20px 0 50px 0;
+}
+.accordion .card{
+    border-radius: 0;
+    background: none;
+    border-left-width:0;
+    border-right-width: 0;
+   
+
+}
+.accordion .card .card-header{
+    background: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-left: -300px;
+    border-radius: 0;
+   
+
+   
+    
+}
+.accordion .card .card-header h2{
+    font-size: 2rem;
+    
+    
+}
+.accordion .card .card-header .btn{
+    color: black
+    width: 100%;
+    text-align: left;
+    padding-left: 300px;
+    padding-right: 0;
+}
+#setit{
+float: right;
+
+}
