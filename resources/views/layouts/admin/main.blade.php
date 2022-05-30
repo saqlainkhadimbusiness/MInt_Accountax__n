@@ -77,6 +77,7 @@
                   <li><a href="{{ route('admin.accounts.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>Accounts</span></a></li>
                   <li><a href="{{ route('admin.letters.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>Scanned Letters</span></a></li>
                   <li><a href="{{ route('admin.quotes.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>Quotations</span></a></li>
+                  <li><a href="{{ route('admin.reviews.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>Reviews</span></a></li>
                 </ul>
               </div>
             </div>

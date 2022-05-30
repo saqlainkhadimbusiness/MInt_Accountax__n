@@ -65,11 +65,12 @@ Route::group(['middleware' => 'auth'], function() {
 		// Route::resource('statements', 'Admin\StatementController', ['except' => [ 'show' ]]);
 		Route::resource('letters', 'Admin\LetterController', ['except' => [ 'show', 'edit', 'update' ]]);
 		Route::resource('quotes', 'Admin\QuoteController', ['except' => [ 'show', 'create', 'store', 'edit', 'update' ]]);
+		Route::resource('reviews', 'Admin\ReviewController', ['except' => [ 'show' ]]);
 		Route::resource('payments', 'Admin\PaymentController', ['except' => [ 'show' ]]);
 		Route::resource('manual-payments', 'Admin\ManualPaymentController', ['except' => [ 'show' ]]);
 		Route::resource('home', 'Admin\HomeController', ['except' => [ 'show' ]]);
 		// Route::get('home', 'Admin\HomeController', ['except' => [ 'store' ]]);
-		
+
 	});
 
 

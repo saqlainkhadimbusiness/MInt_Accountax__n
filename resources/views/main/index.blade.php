@@ -188,14 +188,15 @@ affordable prices. Hurry Up, save your taxes now and grow your business in UK.')
       </div>
    </div>
 </section>
-
+@if(count($reviews)>0)
 <section class="section section-lg bg-gray-100">
    <div class="container text-center">
       <h2>Testimonials</h2>
       <!-- Owl Carousel-->
       <div class="owl-carousel text-left" data-items="1" data-md-items="2" data-dots="true" data-nav="false"
          data-stage-padding="0" data-loop="true" data-margin="30" data-mouse-drag="false" data-autoplay="true">
-         <blockquote class="quote quote-boxed">
+         @foreach($reviews as  $review)
+            <blockquote class="quote quote-boxed">
             <div class="quote-meta">
                <ul class="list-icons">
                   <li>
@@ -229,214 +230,11 @@ affordable prices. Hurry Up, save your taxes now and grow your business in UK.')
                </div>
             </div>
          </blockquote>
-         <blockquote class="quote quote-boxed">
-            <div class="quote-meta">
-               <ul class="list-icons">
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star-half"></div>
-                  </li>
-               </ul>
-               <div class="time">2 days ago</div>
-            </div>
-            <q>“This company deals with all statutory requirements expected of a modern finance advisory or accounting
-               firm. I would recommend using Accountex for a reliable source of independent advice.”</q>
-            <div class="quote-author">
-               <div class="author-media"><img src="images/user-2-64x64.jpg" alt="" width="64" height="64" />
-               </div>
-               <div class="author-body">
-                  <div class="author">
-                     <cite>Mildred Bates</cite>
-                  </div>
-                  <div class="position">Founder &amp; Owner, “InterWeb”</div>
-               </div>
-            </div>
-         </blockquote>
-         <blockquote class="quote quote-boxed">
-            <div class="quote-meta">
-               <ul class="list-icons">
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star-half"></div>
-                  </li>
-               </ul>
-               <div class="time">2 days ago</div>
-            </div>
-            <q>“These guys looked in detail at my accounting needs and helped me choose the solution that is best for
-               me. I am very pleased with the input I received from Accountex and would recommend them.”</q>
-            <div class="quote-author">
-               <div class="author-media"><img src="images/user-3-64x64.jpg" alt="" width="64" height="64" />
-               </div>
-               <div class="author-body">
-                  <div class="author">
-                     <cite>Julia Bennett</cite>
-                  </div>
-                  <div class="position">CEO, “Betrox Co.”</div>
-               </div>
-            </div>
-         </blockquote>
-         <blockquote class="quote quote-boxed">
-            <div class="quote-meta">
-               <ul class="list-icons">
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star-half"></div>
-                  </li>
-               </ul>
-               <div class="time">2 days ago</div>
-            </div>
-            <q>“We have been working with Accountex for three years. They provide us with expert advice in relation to
-               our annual accounts, tax and Solicitors’ accounts rules. Their team is very professional.”</q>
-            <div class="quote-author">
-               <div class="author-media"><img src="images/user-4-64x64.jpg" alt="" width="64" height="64" />
-               </div>
-               <div class="author-body">
-                  <div class="author">
-                     <cite>Jane Ross</cite>
-                  </div>
-                  <div class="position">CFO, “Amaze Ltd.”</div>
-               </div>
-            </div>
-         </blockquote>
-         <blockquote class="quote quote-boxed">
-            <div class="quote-meta">
-               <ul class="list-icons">
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star-half"></div>
-                  </li>
-               </ul>
-               <div class="time">2 days ago</div>
-            </div>
-            <q>“Accountex has helped us for many years. We have always been impressed by the team’s expertise and
-               understanding of small businesses. They have a personal, proactive approach to guide us.”</q>
-            <div class="quote-author">
-               <div class="author-media"><img src="images/user-5-64x64.jpg" alt="" width="64" height="64" />
-               </div>
-               <div class="author-body">
-                  <div class="author">
-                     <cite>Christine Richardson</cite>
-                  </div>
-                  <div class="position">Head of Sales, “100K Productions”</div>
-               </div>
-            </div>
-         </blockquote>
-         <blockquote class="quote quote-boxed">
-            <div class="quote-meta">
-               <ul class="list-icons">
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star-half"></div>
-                  </li>
-               </ul>
-               <div class="time">2 days ago</div>
-            </div>
-            <q>“Beyond the day-to-day management of our accounts, this team provides us with solid financial planning
-               advice, effectively taking on the role of an in-house financial director.”</q>
-            <div class="quote-author">
-               <div class="author-media"><img src="images/user-6-64x64.jpg" alt="" width="64" height="64" />
-               </div>
-               <div class="author-body">
-                  <div class="author">
-                     <cite>Kate Peterson</cite>
-                  </div>
-                  <div class="position">Founder &amp; CEO, “iStep Ltd.”</div>
-               </div>
-            </div>
-         </blockquote>
-         <blockquote class="quote quote-boxed">
-            <div class="quote-meta">
-               <ul class="list-icons">
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star"></div>
-                  </li>
-                  <li>
-                     <div class="icon mdi mdi-star-half"></div>
-                  </li>
-               </ul>
-               <div class="time">2 days ago</div>
-            </div>
-            <q>“This company deals with all statutory requirements expected of a modern finance advisory or accounting
-               firm. I would recommend using Accountex for a reliable source of independent advice.”</q>
-            <div class="quote-author">
-               <div class="author-media"><img src="images/user-7-64x64.jpg" alt="" width="64" height="64" />
-               </div>
-               <div class="author-body">
-                  <div class="author">
-                     <cite>Mary Bell</cite>
-                  </div>
-                  <div class="position">Regional Director, “H-Quality Ltd.”</div>
-               </div>
-            </div>
-         </blockquote>
+         @endforeach
       </div>
    </div>
 </section>
-
+@endif
 
 <section class="section section-lg">
    <div class="container">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Review;
 use App\Sector;
 use App\Career;
 use App\Article;
@@ -18,8 +19,9 @@ class PageController extends Controller
         $data=DB::table('homes')->where("id",1)->first();
         $articles = Article::latest()->take(3)->get();
         $services = Service::latest()->take(20)->get();
+        $reviews = Review::latest()->take(20)->get();
 
-        return view('main.index', compact('articles', 'services','data'));
+        return view('main.index', compact('articles', 'services','data','reviews'));
     }
 
     public function about()

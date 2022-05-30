@@ -16,10 +16,12 @@ class CreateReviewsTable extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->bigIncrements('review_id');
             $table->string('person_name');
-            $table->string('position_in_company');
             $table->string('company_name');
             $table->enum('rating',[1,2,3,4,5]);
-            $table->string('review_message');
+            $table->string('position_in_company');
+            $table->longText('review_message');
+            $table->longText('user_image')->nullable();
+            $table->longText('user_image_alt')->nullable();
             $table->timestamps();
         });
     }
