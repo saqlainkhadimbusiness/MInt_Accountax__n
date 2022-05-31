@@ -2,26 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use index;
+use App\Career;
 use App\Review;
 use App\Sector;
-use App\Career;
 use App\Article;
 use App\Service;
 use App\Resource;
 use App\ManualPayment;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PageController extends Controller
 {
     public function index()
     {
+        $faq=DB::table('faqs')->get();
+        // dd($faq);
         $data=DB::table('homes')->where("id",1)->first();
         $articles = Article::latest()->take(3)->get();
         $services = Service::latest()->take(20)->get();
         $reviews = Review::latest()->take(20)->get();
 
-        return view('main.index', compact('articles', 'services','data','reviews'));
+        return view('main.index', compact('articles', 'services','data','reviews','faq'));
     }
 
     public function about()

@@ -70,7 +70,7 @@ Route::group(['middleware' => 'auth'], function() {
 		Route::resource('manual-payments', 'Admin\ManualPaymentController', ['except' => [ 'show' ]]);
 		Route::resource('home', 'Admin\HomeController', ['except' => [ 'show' ]]);
 		// Route::get('home', 'Admin\HomeController', ['except' => [ 'store' ]]);
-
+		Route::resource('faq', 'Admin\faqController', ['except' => [ 'show' ,'view']]);
 	});
 
 
