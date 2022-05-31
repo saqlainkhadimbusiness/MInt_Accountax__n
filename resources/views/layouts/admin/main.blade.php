@@ -59,6 +59,7 @@
                   <li class="divider">Menu</li>
                   <li><a href="{{ route('admin.dashboard') }}"><i class="icon mdi mdi-chart-donut"></i><span>Dashboard</span></a></li>
                   <li><a href="{{ route('admin.home.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>Home</span></a></li>
+                  <li><a href="{{ route('admin.faq.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>FAQ</span></a></li>
                   <li class="parent"><a href="#"><i class="icon mdi mdi-chart-donut"></i><span>Payments</span></a>
                     <ul class="sub-menu">
                       <li><a href="{{ route('admin.payments.index') }}">User Payments</a></li>
