@@ -54,6 +54,10 @@
                   <label for="meta_description">Meta Description</label>
                   <input class="form-control" id="meta_description" type="text" name="meta_description" placeholder="Enter Meta Description"  value="{{ old('meta_description') }}" required>
                 </div>
+                <div class="form-group pt-2">
+                  <label for="keywords_content">Focus keywords </label>
+                  <input class="form-control" id="keywords_content" type="text" name="keywords_content" placeholder="Enter Focus keywords"  value="{{ old('keywords_content') }}" >
+                </div>
 
                 <div class="form-group pt-2">
                   <label for="title">Rank</label>

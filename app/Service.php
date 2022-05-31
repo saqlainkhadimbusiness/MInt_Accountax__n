@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Service extends Model
 {
     protected $fillable = [
-        'id', 'heading_id', 'slug', 'title', 'body', 'meta_description', 'meta_keywords', 'price', 'price1', 'price2', 'rank'
+        'id', 'heading_id', 'slug', 'title', 'body', 'meta_description', 'meta_keywords', 'price', 'price1', 'price2', 'rank','keywords_content'
     ];
 
     protected static function boot()
