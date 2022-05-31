@@ -685,7 +685,7 @@
                     Posts</a></div>
 
     </section>
-    {{-- rfff --}}
+    @if(isset($faq) && count($faq)> 0 )
     <section id="faqs">
         <div class="container">
             <div class="row">
@@ -731,7 +731,7 @@
             </div>
         </div>
     </section>
-
+    @endif
     {{-- rffend --}}
     <section class="section section-lg bg-default">
         <div class="container">
