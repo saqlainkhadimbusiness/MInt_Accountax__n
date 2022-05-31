@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Storage;
 class Article extends Model
 {
     protected $fillable = [
-        'category_id', 'slug', 'title', 'body', 'image', 'meta_description', 'meta_keywords',
+        'category_id', 'slug', 'title', 'body', 'image', 'meta_description', 'meta_keywords','image_alt',
     ];
 
     protected static function boot()

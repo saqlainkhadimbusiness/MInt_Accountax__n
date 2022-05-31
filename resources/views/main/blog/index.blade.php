@@ -24,7 +24,7 @@
                 <div class="post-meta-item">
                   <div class="post-date">{{ $article->created_at->diffForHumans() }}</div>
                 </div>
-              </div><a class="media-wrapper" href="{{ url('blog/' . $article->slug) }}"><img src="{{ url('uploaded/' . $article->image) }}" alt="{{ $article->title }}" width="370" height="272"/></a>
+              </div><a class="media-wrapper" href="{{ url('blog/' . $article->slug) }}"><img src="{{ url('uploaded/' . $article->image) }}" alt="{{ $article->alt_image?$article->alt_image:$article->title }}" width="370" height="272"/></a>
               <div class="post-body">
                 <ul class="list-tags">
                   <li><a class="tag" href="javascript:void(0)">{{ $article->category->name }}</a>

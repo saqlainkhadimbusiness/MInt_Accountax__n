@@ -32,7 +32,7 @@
                       <div class="post-tag">{{ $article->category->name }}</div>
                     </li>
                   </ul>
-                  <img class="img-bordered" src="{{ url('uploaded/' . $article->image) }}" alt="" width="770" height="472"/>
+                  <img class="img-bordered" src="{{ url('uploaded/' . $article->image) }}" alt="{{ $article->alt_image?$article->alt_image:$article->title }}" width="770" height="472"/>
                   <br><br>
 
                   {!! $article->body !!}

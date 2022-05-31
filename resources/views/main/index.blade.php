@@ -189,7 +189,7 @@ affordable prices. Hurry Up, save your taxes now and grow your business in UK.')
       </div>
    </div>
 </section>
-@if( isset($reviews) && count($reviews)>0)
+@if( isset($reviews) && count($reviews) >  0)
 <section class="section section-lg bg-gray-100">
    <div class="container text-center">
       <h2>Testimonials</h2>
