@@ -18,13 +18,13 @@ class PageController extends Controller
 {
     public function index()
     {
-        $faq=DB::table('faqs')->get();
+        $faqs=DB::table('faqs')->get();
         $data=DB::table('homes')->where("id",1)->first();
         $articles = Article::latest()->take(3)->get();
         $services = Service::latest()->take(20)->get();
         $reviews = Review::latest()->take(20)->get();
 
-        return view('main.index', compact('articles', 'services','data','reviews','faq'));
+        return view('main.index', compact('articles', 'services','data','reviews','faqs'));
     }
 
     public function about()

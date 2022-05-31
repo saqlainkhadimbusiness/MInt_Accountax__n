@@ -14,7 +14,7 @@
 
                 <div class="form-group pt-2">
                   <label for="name">Question</label>
-                  <input class="form-control" id="name" type="text" name="name1" placeholder="Enter Name" value="{{ $faq->Question }}" required>
+                  <input class="form-control" id="name" type="text" name="name1"   maxlength="250" placeholder="Enter Name" value="{{ $faq->Question }}" required>
                 </div>
                 <div class="form-group pt-2">
                     <label for="name">Answer</label>

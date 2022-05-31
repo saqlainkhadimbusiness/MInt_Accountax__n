@@ -16,15 +16,15 @@
                     <thead>
                       <tr>
                         <th>Question</th>
-                        <th>Answer</th>
+                          <th>Created At</th>
                         <th>Actions</th>
                       </tr>
                     </thead>
                     <tbody>
                       	@foreach($faq as $show)
 	                      <tr class="gradeU">
-                          <td>{{ $show->Question }}</td>
-	                       	<td>{{ $show->Answer }}</td>
+                          <td style="max-width: 250px;">{{ $show->Question }}</td>
+                              <td>{{ $show->created_at->diffForHumans() }}</td>
                           <td>
                             <a href="{{ route('admin.faq.edit', $show->id) }}" class="btn btn-info"><span class="icon mdi mdi-edit"></span></a>
 	                       	  <a href="javascript:void(0)" data-link="{{ route('admin.faq.destroy', $show->id) }}" class="btn btn-danger delete-button"><span class="icon mdi mdi-delete"></span></a>

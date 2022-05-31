@@ -233,259 +233,6 @@
 </section>
 @endif
 
-    <section class="section section-lg bg-gray-100">
-        <div class="container text-center">
-            <h2>Testimonials</h2>
-            <!-- Owl Carousel-->
-            <div class="owl-carousel text-left" data-items="1" data-md-items="2" data-dots="true" data-nav="false"
-                data-stage-padding="0" data-loop="true" data-margin="30" data-mouse-drag="false" data-autoplay="true">
-                <blockquote class="quote quote-boxed">
-                    <div class="quote-meta">
-                        <ul class="list-icons">
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star-half"></div>
-                            </li>
-                        </ul>
-                        <div class="time">2 days ago</div>
-                    </div>
-                    <q>“The service from Accountex has been excellent and is faultless. They give us the reassurance to know
-                        we
-                        are complying with the rules and regulations and the team is brilliant at getting back to us.”</q>
-                    <div class="quote-author">
-                        <div class="author-media"><img src="images/user-1-64x64.jpg" alt="" width="64" height="64" />
-                        </div>
-                        <div class="author-body">
-                            <div class="author">
-                                <cite>Marie Hanson</cite>
-                            </div>
-                            <div class="position">Co-Founder and CTO, “Smith &amp; Hanson”</div>
-                        </div>
-                    </div>
-                </blockquote>
-                <blockquote class="quote quote-boxed">
-                    <div class="quote-meta">
-                        <ul class="list-icons">
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star-half"></div>
-                            </li>
-                        </ul>
-                        <div class="time">2 days ago</div>
-                    </div>
-                    <q>“This company deals with all statutory requirements expected of a modern finance advisory or
-                        accounting
-                        firm. I would recommend using Accountex for a reliable source of independent advice.”</q>
-                    <div class="quote-author">
-                        <div class="author-media"><img src="images/user-2-64x64.jpg" alt="" width="64" height="64" />
-                        </div>
-                        <div class="author-body">
-                            <div class="author">
-                                <cite>Mildred Bates</cite>
-                            </div>
-                            <div class="position">Founder &amp; Owner, “InterWeb”</div>
-                        </div>
-                    </div>
-                </blockquote>
-                <blockquote class="quote quote-boxed">
-                    <div class="quote-meta">
-                        <ul class="list-icons">
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star-half"></div>
-                            </li>
-                        </ul>
-                        <div class="time">2 days ago</div>
-                    </div>
-                    <q>“These guys looked in detail at my accounting needs and helped me choose the solution that is best
-                        for
-                        me. I am very pleased with the input I received from Accountex and would recommend them.”</q>
-                    <div class="quote-author">
-                        <div class="author-media"><img src="images/user-3-64x64.jpg" alt="" width="64" height="64" />
-                        </div>
-                        <div class="author-body">
-                            <div class="author">
-                                <cite>Julia Bennett</cite>
-                            </div>
-                            <div class="position">CEO, “Betrox Co.”</div>
-                        </div>
-                    </div>
-                </blockquote>
-                <blockquote class="quote quote-boxed">
-                    <div class="quote-meta">
-                        <ul class="list-icons">
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star-half"></div>
-                            </li>
-                        </ul>
-                        <div class="time">2 days ago</div>
-                    </div>
-                    <q>“We have been working with Accountex for three years. They provide us with expert advice in relation
-                        to
-                        our annual accounts, tax and Solicitors’ accounts rules. Their team is very professional.”</q>
-                    <div class="quote-author">
-                        <div class="author-media"><img src="images/user-4-64x64.jpg" alt="" width="64" height="64" />
-                        </div>
-                        <div class="author-body">
-                            <div class="author">
-                                <cite>Jane Ross</cite>
-                            </div>
-                            <div class="position">CFO, “Amaze Ltd.”</div>
-                        </div>
-                    </div>
-                </blockquote>
-                <blockquote class="quote quote-boxed">
-                    <div class="quote-meta">
-                        <ul class="list-icons">
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star-half"></div>
-                            </li>
-                        </ul>
-                        <div class="time">2 days ago</div>
-                    </div>
-                    <q>“Accountex has helped us for many years. We have always been impressed by the team’s expertise and
-                        understanding of small businesses. They have a personal, proactive approach to guide us.”</q>
-                    <div class="quote-author">
-                        <div class="author-media"><img src="images/user-5-64x64.jpg" alt="" width="64" height="64" />
-                        </div>
-                        <div class="author-body">
-                            <div class="author">
-                                <cite>Christine Richardson</cite>
-                            </div>
-                            <div class="position">Head of Sales, “100K Productions”</div>
-                        </div>
-                    </div>
-                </blockquote>
-                <blockquote class="quote quote-boxed">
-                    <div class="quote-meta">
-                        <ul class="list-icons">
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star-half"></div>
-                            </li>
-                        </ul>
-                        <div class="time">2 days ago</div>
-                    </div>
-                    <q>“Beyond the day-to-day management of our accounts, this team provides us with solid financial
-                        planning
-                        advice, effectively taking on the role of an in-house financial director.”</q>
-                    <div class="quote-author">
-                        <div class="author-media"><img src="images/user-6-64x64.jpg" alt="" width="64" height="64" />
-                        </div>
-                        <div class="author-body">
-                            <div class="author">
-                                <cite>Kate Peterson</cite>
-                            </div>
-                            <div class="position">Founder &amp; CEO, “iStep Ltd.”</div>
-                        </div>
-                    </div>
-                </blockquote>
-                <blockquote class="quote quote-boxed">
-                    <div class="quote-meta">
-                        <ul class="list-icons">
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star"></div>
-                            </li>
-                            <li>
-                                <div class="icon mdi mdi-star-half"></div>
-                            </li>
-                        </ul>
-                        <div class="time">2 days ago</div>
-                    </div>
-                    <q>“This company deals with all statutory requirements expected of a modern finance advisory or
-                        accounting
-                        firm. I would recommend using Accountex for a reliable source of independent advice.”</q>
-                    <div class="quote-author">
-                        <div class="author-media"><img src="images/user-7-64x64.jpg" alt="" width="64" height="64" />
-                        </div>
-                        <div class="author-body">
-                            <div class="author">
-                                <cite>Mary Bell</cite>
-                            </div>
-                            <div class="position">Regional Director, “H-Quality Ltd.”</div>
-                        </div>
-                    </div>
-                </blockquote>
-            </div>
-        </div>
-    </section>
 
 
     <section class="section section-lg">
@@ -685,53 +432,48 @@
                     Posts</a></div>
 
     </section>
-    @if(isset($faq) && count($faq)> 0 )
-    <section id="faqs">
-        <div class="container">
-            <div class="row">
+    @if(isset($faqs) && count($faqs)> 0 )
+        <section id="faqs">
+            <div class="container">
+                <div class="row">
                     <div class="col-lg-8 offset-lg-2">
                         <h1 class="text-center"><b>FAQ</b></h1>
-                       
-                        <div class="accordion mt-5" id="accordionExample">  
-                         
+
+                        <div class="accordion mt-5" id="accordionExample">
+
                             <div class="card">
-                              @php
-                              $a=1;
-                           @endphp
-                              @foreach ($faq as $show)
-                              
-                                <div class="card-header" id="headingone">
-                                    <h2 class="clearfix mb-0">
-                                        <span class="btn btn-link" data-toggle="collapse" data-target="#id{{$a}}"
-                                            aria-expanded="true" aria-controls="id{{$a}}"><b style="color:green" ;>
-                                             {{$show->Question}}</b>
-                                        </span>
-                                        <span class="btn btn-link" data-toggle="collapse" data-target="#id{{$a}}"
-                                            aria-expanded="true" aria-controls="id{{$a}}"><i style=" margin-left: 280px; color:green;
-                                  font-size: 20px;" class="fa-solid fa-plus" id="setit"></i>
-                                        </span>
-                                    </h2>
-                                </div>
-                                <div id="id{{$a}}" class="collapse" aria-labelledby="headingone"
-                                    data-parent="#accordionExample">
-                                    <div class="card-body">
-                                       {{$show->Answer}}
-                                    </div>
-                                </div>
                                 @php
-                                 $a=$a+1;
-                              @endphp
+                                    $a=1;
+                                @endphp
+                                @foreach ($faqs as $key =>$show)
+                                    <div id="accordion">
+                                        <div class="card">
+                                            <div class="card-header" id="heading{{$key}}">
+                                                <h5 class="mb-0">
+                                                    <button class="btn btn-link collapsed"  style="word-wrap: break-word;white-space: normal;font-weight:bolder;" data-toggle="collapse" data-target="#collapse{{$key}}" aria-expanded="false" aria-controls="collapse{{$key}}">
+                                                        <b>  {{$show->Question}}</b>
+                                                    </button>
+                                                </h5>
+                                            </div>
+                                            <div id="collapse{{$key}}" class="collapse" aria-labelledby="heading{{$key}}" data-parent="#accordion">
+                                                <div class="card-body">
+                                                    {{$show->Answer}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 @endforeach
                             </div>
-                            
+
                         </div>
-                       
+
                     </div>
-                   
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
     @endif
+
     {{-- rffend --}}
     <section class="section section-lg bg-default">
         <div class="container">
