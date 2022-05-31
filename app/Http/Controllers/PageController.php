@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\faq;
 use index;
 use App\Career;
 use App\Review;
@@ -18,7 +19,6 @@ class PageController extends Controller
     public function index()
     {
         $faq=DB::table('faqs')->get();
-        // dd($faq);
         $data=DB::table('homes')->where("id",1)->first();
         $articles = Article::latest()->take(3)->get();
         $services = Service::latest()->take(20)->get();
@@ -48,7 +48,8 @@ class PageController extends Controller
     {
     	if ($service = Service::whereSlug($slug)->first()) {
             $reviews = Review::latest()->take(20)->get();
-            return view('main.service.show', compact('service','reviews'));
+            $faqs = faq::latest()->take(20)->get();
+            return view('main.service.show', compact('service','reviews','faqs'));
         }
 
         if ($resource = Resource::whereSlug($slug)->first()) {

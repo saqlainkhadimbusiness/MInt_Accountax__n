@@ -68,7 +68,53 @@
           @endif
         </form>
       @endauth
+        @if(isset($faq) && count($faq)> 0 )
+            <section id="faqs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2">
+                            <h1 class="text-center"><b>FAQ</b></h1>
 
+                            <div class="accordion mt-5" id="accordionExample">
+
+                                <div class="card">
+                                    @php
+                                        $a=1;
+                                    @endphp
+                                    @foreach ($faq as $show)
+
+                                        <div class="card-header" id="headingone">
+                                            <h2 class="clearfix mb-0">
+                                        <span class="btn btn-link" data-toggle="collapse" data-target="#id{{$a}}"
+                                              aria-expanded="true" aria-controls="id{{$a}}"><b style="color:green" ;>
+                                             {{$show->Question}}</b>
+                                        </span>
+                                                <span class="btn btn-link" data-toggle="collapse" data-target="#id{{$a}}"
+                                                      aria-expanded="true" aria-controls="id{{$a}}"><i style=" margin-left: 280px; color:green;
+                                  font-size: 20px;" class="fa-solid fa-plus" id="setit"></i>
+                                        </span>
+                                            </h2>
+                                        </div>
+                                        <div id="id{{$a}}" class="collapse" aria-labelledby="headingone"
+                                             data-parent="#accordionExample">
+                                            <div class="card-body">
+                                                {{$show->Answer}}
+                                            </div>
+                                        </div>
+                                        @php
+                                            $a=$a+1;
+                                        @endphp
+                                    @endforeach
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        @endif
         @if( isset($reviews) && count($reviews)>0)
             <section class="section section-lg bg-gray-100">
                 <div class="container text-center">
