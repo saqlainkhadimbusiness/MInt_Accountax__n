@@ -59,12 +59,17 @@
                   <li class="divider">Menu</li>
                   <li><a href="{{ route('admin.dashboard') }}"><i class="icon mdi mdi-chart-donut"></i><span>Dashboard</span></a></li>
                   <li><a href="{{ route('admin.home.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>Home</span></a></li>
-                  <li><a href="{{ route('admin.faq.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>FAQ</span></a></li>
                   <li class="parent"><a href="#"><i class="icon mdi mdi-chart-donut"></i><span>Payments</span></a>
-                    <ul class="sub-menu">
-                      <li><a href="{{ route('admin.payments.index') }}">User Payments</a></li>
-                      <li><a href="{{ route('admin.manual-payments.index') }}">Manual Payments</a></li>
-                    </ul>
+                  <ul class="sub-menu">
+                    <li><a href="{{ route('admin.payments.index') }}">User Payments</a></li>
+                    <li><a href="{{ route('admin.manual-payments.index') }}">Manual Payments</a></li>
+                  </ul>
+                  </li>
+                  <li class="parent"><a href="#"><i class="icon mdi mdi-chart-donut"></i><span>Dynamic Data</span></a>
+                  <ul class="sub-menu">
+                    <li><a href="{{ route('admin.focus-keywords.index') }}">Focus Keywords</a></li>
+                    <li><a href="{{ route('admin.manual-payments.index') }}">Header  COde</a></li>
+                  </ul>
                   </li>
                   <li><a href="{{ route('admin.services.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>Services</span></a></li>
                   <li><a href="{{ route('admin.headings.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>Headings</span></a></li>
@@ -78,6 +83,7 @@
                   <li><a href="{{ route('admin.accounts.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>Accounts</span></a></li>
                   <li><a href="{{ route('admin.letters.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>Scanned Letters</span></a></li>
                   <li><a href="{{ route('admin.quotes.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>Quotations</span></a></li>
+                  <li><a href="{{ route('admin.faq.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>FAQ</span></a></li>
                   <li><a href="{{ route('admin.reviews.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>Reviews</span></a></li>
                 </ul>
               </div>

@@ -46,6 +46,7 @@
                     method: 'DELETE',
                     contentType: 'application/json',
                     success: function(response) {
+                        console.log(response);
                         swal({
                           position: 'top-end',
                           type: 'success',

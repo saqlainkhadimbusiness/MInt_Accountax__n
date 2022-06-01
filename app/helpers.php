@@ -1,8 +1,27 @@
 <?php
 use App\home;
+use App\Keyword;
 
-function keywords(){
-    return "YOU are  awesome";
+function keywords($route=''){
+
+    if($route=='' ||  $route=='home'){
+        $keywords= Keyword::where('slug','home')->get();
+        $str='<meta name="Keywords" content="';
+        foreach ($keywords as $keyword){
+            $str.=$keyword->keyword.',';
+        }
+        $str.='">';
+        return $str;
+    }
+    else{
+        $keywords= Keyword::where('slug',$route)->get();
+        $str='<meta name="Keywords" content="';
+        foreach ($keywords as $keyword){
+            $str.=$keyword->keyword.',';
+        }
+        $str.='">';
+        return $str;
+    }
 }
 
 function home_title(){

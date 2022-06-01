@@ -3,7 +3,8 @@
   <head>
     <title>@yield('title', config('app.name'))</title>
     <meta name="description" content="@yield('description', config('app.name'))">
-    <meta name="keywords" content="@yield('keywords', '')">
+{{--    <meta name="keywords" content="@yield('keywords', '')">--}}
+    {!! keywords(Route::current()->getName()) !!}
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
