@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKeywordsTable extends Migration
+class KeywordsGroup extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateKeywordsTable extends Migration
      */
     public function up()
     {
-        Schema::create('keywords', function (Blueprint $table) {
+        Schema::create('keywords_groups', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('keyword');
-            $table->string('slug');
-            $table->integer('group_id');
+            $table->string('name')->unique();
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateKeywordsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('keywords');
+        Schema::dropIfExists('keywords_groups');
     }
 }

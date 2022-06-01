@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Career;
 use App\Keyword;
+use App\keywords_group;
 use App\Resource;
 use App\Sector;
 use App\Service;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class KeywordController extends Controller
 {
@@ -19,7 +21,7 @@ class KeywordController extends Controller
      */
     public function index()
     {
-        $keywords = Keyword::latest()->get();
+        $keywords = keywords_group::latest()->get();
         return view('admin.focus-keywords.index', compact('keywords'));
     }
 
@@ -46,10 +48,11 @@ class KeywordController extends Controller
     public function store(Request $request)
     {
         $data=$request->all();
-        foreach ($data->slug as $key=>$slug){
-            Keyword::create(['keyword'=>$data->keyword,'slug'=>$data->slug[0],]);
+        $group=keywords_group::create($data);
+        foreach ($data['slug'] as $key=>$slug){
+            Keyword::create(['keyword'=>$data['keyword'],'slug'=>$slug,'group_id'=>$group->id]);
         }
-        return redirect(route('admin.focus-keywords'));
+        return redirect(route('admin.focus-keywords.index'))->with('message', 'Record Added successfully');
     }
 
     /**
@@ -69,9 +72,16 @@ class KeywordController extends Controller
      * @param  \App\Keyword  $keyword
      * @return \Illuminate\Http\Response
      */
-    public function edit(Keyword $keyword)
+    public function edit($id)
     {
-        //
+        $keywords=DB::table('keywords_groups')
+            ->leftjoin('keywords','keywords.group_id','=','keywords_groups.id')
+            ->select('keywords_groups.name','keywords.*')->where('keywords_groups.id',$id)->get();
+        $services =Service::all();
+        $resources =Resource::all();
+        $careers = Career::all();
+        $sectors = Sector::all();
+        return view('admin.focus-keywords.edit',compact('keywords','services','resources','careers','sectors'));
     }
 
     /**
@@ -81,9 +91,17 @@ class KeywordController extends Controller
      * @param  \App\Keyword  $keyword
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Keyword $keyword)
+    public function update(Request $request, Keyword $keyword,$id)
     {
-        //
+
+        DB::table('keywords')->where('keywords.group_id',$id)->delete();
+        DB::table('keywords_groups')->where('keywords_groups.id',$id)->delete();
+        $data=$request->all();
+        $group=keywords_group::create($data);
+        foreach ($data['slug'] as $key=>$slug){
+            Keyword::create(['keyword'=>$data['keyword'],'slug'=>$slug,'group_id'=>$group->id]);
+        }
+        return redirect(route('admin.focus-keywords.index'))->with('message', 'Record Updated successfully');
     }
 
     /**
@@ -92,8 +110,9 @@ class KeywordController extends Controller
      * @param  \App\Keyword  $keyword
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Keyword $keyword)
+    public function destroy(Keyword $keyword,$id)
     {
-        $keyword->delete();
+        DB::table('keywords')->where('keywords.group_id',$id)->delete();
+        DB::table('keywords_groups')->where('keywords_groups.id',$id)->delete();
     }
 }

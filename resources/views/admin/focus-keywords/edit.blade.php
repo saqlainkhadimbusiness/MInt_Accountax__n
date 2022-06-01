@@ -4,7 +4,7 @@
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/flatly/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ url('assets/tags-input/tagsinput.css') }}"/>
-{{--    select2 links--}}
+    {{--    select2 links--}}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><!-- jQuery base library needed -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
@@ -22,17 +22,18 @@
                 <div class="card card-border-color card-border-color-primary">
                     <div class="card-header card-header-divider">Add Keywords</div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('admin.focus-keywords.store') }}">
+                        <form method="POST" action="{{ route('admin.focus-keywords.update',$keywords[0]->group_id) }}">
                             @csrf
+                            @method('PUT')
 
                             <div class="form-group pt-2">
                                 <label for="name">Unique Name</label>
-                                <input type="text" class="form-control" id="name"  name="name" placeholder="Enter Unique Name" required>
+                                <input type="text" class="form-control" id="name"  name="name" placeholder="Enter Unique Name" value="{{$keywords[0]->name}}" required>
                             </div>
 
                             <div class="form-group pt-2">
                                 <label for="keyword">Keywords</label>
-                                <input type="text" data-role="tagsinput" class="form-control"  id="keyword"  name="keyword" placeholder="Enter Keywords" required>
+                                <input type="text" data-role="tagsinput" class="form-control"  id="keyword"  name="keyword"  value="{{$keywords[0]->keyword}}" placeholder="Enter Keywords" required>
                             </div>
 
                             <div class="form-group pt-2">
@@ -40,16 +41,20 @@
                                 <select class="form-control select2" id="keyword"  name="slug[]" placeholder="Enter Keywords" multiple required>
                                     <option value="">Select url</option>
                                     <option value="home">Home</option>
+
+                                    @foreach($keywords as $keyword)
+                                    <option value="{{$keyword->slug}}"  selected>{{$keyword->slug}}</option>
+                                    @endforeach
                                     @foreach($services as $slug)
                                         <option value="{{$slug->slug}}">{{$slug->slug}}</option>
                                     @endforeach
-                                     @foreach($resources as $slug)
+                                    @foreach($resources as $slug)
                                         <option value="{{$slug->slug}}">{{$slug->slug}}</option>
                                     @endforeach
-                                     @foreach($careers as $slug)
+                                    @foreach($careers as $slug)
                                         <option value="{{$slug->slug}}">{{$slug->slug}}</option>
                                     @endforeach
-                                     @foreach($sectors as $slug)
+                                    @foreach($sectors as $slug)
                                         <option value="{{$slug->slug}}">{{$slug->slug}}</option>
                                     @endforeach
 

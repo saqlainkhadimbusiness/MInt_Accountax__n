@@ -15,7 +15,7 @@
                         <table class="table table-striped table-hover table-fw-widget" id="table4">
                             <thead>
                             <tr>
-                                <th>Url</th>
+                                <th>Name</th>
                                 <th>Created At</th>
                                 <th>Actions</th>
                             </tr>
@@ -23,7 +23,7 @@
                             <tbody>
                             @foreach($keywords as $keyword)
                                 <tr class="gradeU">
-                                    <td>{{ $keyword->slug }}</td>
+                                    <td>{{ $keyword->name }}</td>
                                     <td>{{ $keyword->created_at->diffForHumans() }}</td>
                                     <td>
                                         <a href="{{ route('admin.focus-keywords.edit', $keyword->id) }}" class="btn btn-info"><span class="icon mdi mdi-edit"></span></a>
