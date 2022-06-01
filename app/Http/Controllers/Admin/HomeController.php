@@ -21,11 +21,13 @@ class HomeController extends Controller
     $home= home::where('id',1)->first();
     if(isset($home) && $home){
       $home->services_content = $request->input('services');
+      $home->home_title = $request->input('home_title');
       $home->save();
     
     }else{
       $home= new home();
       $home->services_content = $request->input('services');
+      $home->home_title = $request->input('home_title');
       $home->save();
 
      }

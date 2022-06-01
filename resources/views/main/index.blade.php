@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Welcome to Mint Accountax for Online Cheap Accountants UK')
+@section('title', home_title())
 @section('description',
     'MintAccountax providing online accountants, Tax, and other legal & financial services at
     affordable prices. Hurry Up, save your taxes now and grow your business in UK.')
