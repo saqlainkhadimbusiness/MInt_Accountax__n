@@ -70,9 +70,10 @@ Route::group(['middleware' => 'auth'], function() {
 		Route::resource('manual-payments', 'Admin\ManualPaymentController', ['except' => [ 'show' ]]);
 		Route::resource('home', 'Admin\HomeController', ['except' => [ 'show' ]]);
 		Route::resource('faq', 'Admin\faqController', ['except' => [ 'show' ,'view']]);
-		Route::resource('focus-keywords', 'Admin\KeywordController', ['except' => [ 'show' ,'view']]);
+		Route::resource('focus-keywords', 'Admin\KeywordController1', ['except' => [ 'show' ,'view']]);
 		Route::resource('header-code', 'Admin\HeaderCodeController', ['except' => [ 'show' ,'view']]);
 	});
-
-
+    Route::group(['prefix' => 'developer', 'middleware' => 'admin', 'as' => 'admin.'], function() {
+        Route::resource('error_logs', 'Developer\ErrorLogController', ['except' => [ 'show' ,'view']]);
+    });
 });
