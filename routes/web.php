@@ -73,7 +73,7 @@ Route::group(['middleware' => 'auth'], function() {
 		Route::resource('focus-keywords', 'Admin\KeywordController1', ['except' => [ 'show' ,'view']]);
 		Route::resource('header-code', 'Admin\HeaderCodeController', ['except' => [ 'show' ,'view']]);
 	});
-    Route::group(['prefix' => 'developer', 'middleware' => 'admin', 'as' => 'admin.'], function() {
+    Route::group(['prefix' => 'developer', 'middleware' => 'admin', 'as' => 'developer.'], function() {
         Route::resource('error_logs', 'Developer\ErrorLogController', ['except' => [ 'show' ,'view']]);
     });
 });
