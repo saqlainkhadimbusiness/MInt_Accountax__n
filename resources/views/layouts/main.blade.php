@@ -4,7 +4,7 @@
     <title>@yield('title', config('app.name'))</title>
     <meta name="description" content="@yield('description', config('app.name'))">
     <meta name="keywords" content="@yield('keywords', '')">
-    {!! keywords(url()->current()) !!}
+    {!! keywords(url()->current()) !!}3
     {!! header_code(url()->current()) !!}
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -81,7 +81,7 @@
                 <a class="icon icon-md novi-icon mdi mdi-whatsapp" href="https://wa.me/447481355570" target="_blank"></a>
                 <a class="icon icon-md novi-icon mdi mdi-facebook" href="https://www.facebook.com/Mintaccountax" target="_blank"></a>
                 {{-- <a class="icon icon-md novi-icon mdi mdi-twitter" href="#"></a> --}}
-                <a class="icon icon-md novi-icon mdi mdi-instagram" href="#"></a>
+                <a class="icon icon-md novi-icon mdi mdi-instagram" href="https://www.instagram.com/mintaccountax"></a>
                 {{-- <a class="icon icon-md novi-icon mdi mdi-facebook-messenger" href="#"></a> --}}
                 <a class="icon icon-md novi-icon mdi mdi-linkedin" href="https://www.linkedin.com/company/mint-accountax/" target="_blank"></a>
               </div>
