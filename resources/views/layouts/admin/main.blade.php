@@ -68,7 +68,7 @@
                   <li class="parent"><a href="#"><i class="icon mdi mdi-chart-donut"></i><span>Dynamic Data</span></a>
                   <ul class="sub-menu">
                     <li><a href="{{ route('admin.focus-keywords.index') }}">Focus Keywords</a></li>
-                    <li><a href="{{ route('admin.manual-payments.index') }}">Header  COde</a></li>
+                    <li><a href="{{ route('admin.header-code.index') }}">Header  COde</a></li>
                   </ul>
                   </li>
                   <li><a href="{{ route('admin.services.index') }}"><i class="icon mdi mdi-chart-donut"></i><span>Services</span></a></li>

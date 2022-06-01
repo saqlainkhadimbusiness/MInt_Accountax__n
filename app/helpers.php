@@ -4,22 +4,49 @@ use App\Keyword;
 
 function keywords($route=''){
 
+    $route_arr = explode("/", $route, 10);
+    $route_count= count($route_arr)-1;
+    $route= $route_arr[$route_count];
+
     if($route=='' ||  $route=='home'){
         $keywords= Keyword::where('slug','home')->get();
         $str='<meta name="Keywords" content="';
-        foreach ($keywords as $keyword){
-            $str.=$keyword->keyword.',';
+        foreach ($keywords as $key=>$keyword){
+            $str.=(($key!=0)?',':'').$keyword->keyword;
         }
         $str.='">';
+        dd($str);
         return $str;
     }
     else{
         $keywords= Keyword::where('slug',$route)->get();
         $str='<meta name="Keywords" content="';
-        foreach ($keywords as $keyword){
-            $str.=$keyword->keyword.',';
+        foreach ($keywords as $key=>$keyword){
+            $str.=(($key!=0)?',':'').$keyword->keyword;
         }
         $str.='">';
+        return $str;
+    }
+}
+function header_code($route=''){
+    $route_arr = explode("/", $route, 10);
+    $route_count= count($route_arr)-1;
+    $route= $route_arr[$route_count];
+    if($route=='' ||  $route=='home'){
+
+        $header_codes= \App\Header_Code::where('slug','home')->get();
+        $str='';
+        foreach ($header_codes as $header_code){
+            $str.=$header_code->header_code;
+        }
+        return $str;
+    }
+    else{
+        $header_codes= \App\Header_Code::where('slug',$route)->get();
+        $str='';
+        foreach ($header_codes as $header_code){
+            $str.=$header_code->header_code;
+        }
         return $str;
     }
 }

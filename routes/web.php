@@ -71,6 +71,7 @@ Route::group(['middleware' => 'auth'], function() {
 		Route::resource('home', 'Admin\HomeController', ['except' => [ 'show' ]]);
 		Route::resource('faq', 'Admin\faqController', ['except' => [ 'show' ,'view']]);
 		Route::resource('focus-keywords', 'Admin\KeywordController', ['except' => [ 'show' ,'view']]);
+		Route::resource('header-code', 'Admin\HeaderCodeController', ['except' => [ 'show' ,'view']]);
 	});
 
 

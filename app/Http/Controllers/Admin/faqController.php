@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\faq;
 use Illuminate\Support\Facades\DB;
-
 use App\Http\Controllers\Controller;
 
 class faqController extends Controller
