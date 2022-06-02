@@ -15,18 +15,18 @@ class CreateErrorLogsTable extends Migration
     {
         Schema::create('error_logs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->enum('status',['new','fix','ignore','modifying']);
-            $table->string('previous_url');
-            $table->string('current_url');
+            $table->enum('status',['new','fixed','informed','ignore'])->default('new');
+            $table->text('previous_url');
+            $table->text('current_url');
             $table->text('request_params');
-            $table->longText('error_msg');
+            $table->text('error_msg');
             $table->longText('error_trace');
             $table->string('device');
             $table->string('browser');
-            $table->longText('platform');
-            $table->longText('user_agent');
-            $table->string('error_code');
-            $table->string('error_type');
+            $table->string('user_agent');
+            $table->string('platform');
+            $table->enum('error_type',['maximum_execution_time','allowed_memory','queue','api','general']);
+            $table->string('error_code')->nullable();
             $table->timestamps();
         });
     }

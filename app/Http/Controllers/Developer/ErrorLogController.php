@@ -15,7 +15,8 @@ class ErrorLogController extends Controller
      */
     public function index()
     {
-        return view('developer.Error_list');
+        $error_logs=ErrorLog::latest()->get();
+        return view('developer.Error_logs.list',compact('error_logs'));
     }
 
     /**
@@ -26,6 +27,11 @@ class ErrorLogController extends Controller
     public function create()
     {
         //
+    }
+
+    public function view(ErrorLog $errorLog)
+    {
+       dd(0);
     }
 
     /**
@@ -45,9 +51,10 @@ class ErrorLogController extends Controller
      * @param  \App\ErrorLog  $errorLog
      * @return \Illuminate\Http\Response
      */
-    public function show(ErrorLog $errorLog)
+    public function show($id)
     {
-        //
+        $error=ErrorLog::where('id',$id)->first();
+        return view('developer.Error_logs.view',compact('error'));
     }
 
     /**
@@ -58,7 +65,7 @@ class ErrorLogController extends Controller
      */
     public function edit(ErrorLog $errorLog)
     {
-        //
+
     }
 
     /**

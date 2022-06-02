@@ -7,15 +7,13 @@ function keywords($route=''){
     $route_arr = explode("/", $route, 10);
     $route_count= count($route_arr)-1;
     $route= $route_arr[$route_count];
-
-    if($route=='' ||  $route=='home'){
+    if($route=='' ||  $route=='home' || count($route_arr) <= 3 ){
         $keywords= Keyword::where('slug','home')->get();
         $str='<meta name="Keywords" content="';
         foreach ($keywords as $key=>$keyword){
             $str.=(($key!=0)?',':'').$keyword->keyword;
         }
         $str.='">';
-        dd($str);
         return $str;
     }
     else{
@@ -32,7 +30,7 @@ function header_code($route=''){
     $route_arr = explode("/", $route, 10);
     $route_count= count($route_arr)-1;
     $route= $route_arr[$route_count];
-    if($route=='' ||  $route=='home'){
+    if($route=='' ||  $route=='home' || count($route_arr) <= 3 ){
 
         $header_codes= \App\Header_Code::where('slug','home')->get();
         $str='';

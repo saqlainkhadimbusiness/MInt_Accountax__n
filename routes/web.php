@@ -74,6 +74,6 @@ Route::group(['middleware' => 'auth'], function() {
 		Route::resource('header-code', 'Admin\HeaderCodeController', ['except' => [ 'show' ,'view']]);
 	});
     Route::group(['prefix' => 'developer', 'middleware' => 'admin', 'as' => 'developer.'], function() {
-        Route::resource('error_logs', 'Developer\ErrorLogController', ['except' => [ 'show' ,'view']]);
+        Route::resource('error_logs', 'Developer\ErrorLogController');
     });
 });

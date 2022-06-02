@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ErrorLog extends Model
 {
-    protected $fillable=['status','previous_url','current_url','request_params','error_msg','error_trace','device','browser','platform','user_agent','error_code','error_type'];
+    protected $fillable=['status','previous_url','request_params','error_msg','error_trace','device','browser','user_agent','platform','error_type','error_code','current_url'];
     protected $table='error_logs';
 
 }
