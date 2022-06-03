@@ -75,5 +75,11 @@ Route::group(['middleware' => 'auth'], function() {
 	});
     Route::group(['prefix' => 'developer', 'middleware' => 'admin', 'as' => 'developer.'], function() {
         Route::resource('error_logs', 'Developer\ErrorLogController');
+        Route::resource('dashboard', 'Developer\DashboardController');
+        Route::POST('change_status', 'Developer\ErrorLogController@changeStatus');
+        Route::GET('NewErrors', 'Developer\ErrorLogController@NewErrors');
+        Route::GET('FixedErrors', 'Developer\ErrorLogController@FixedErrors');
+        Route::GET('IgnoredErrors', 'Developer\ErrorLogController@IgnoredErrors');
+        Route::GET('InformedErrors', 'Developer\ErrorLogController@InformedErrors');
     });
 });

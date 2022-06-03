@@ -86,8 +86,40 @@ class ErrorLogController extends Controller
      * @param  \App\ErrorLog  $errorLog
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ErrorLog $errorLog)
+    public function changeStatus( Request $request)
     {
-        //
+        $data=$request->all();
+        ErrorLog::latest()->where('id',$data['id'])->update(['status'=>$data['status']]);
+        return redirect(url()->previous());
     }
+
+    public function NewErrors( )
+    {
+        $error_logs=ErrorLog::latest()->where('status','new')->get();
+        return view('developer.Error_logs.list',compact('error_logs'));
+    }
+
+
+    public function FixedErrors( )
+    {
+        $error_logs=ErrorLog::latest()->where('status','fixed')->get();
+        return view('developer.Error_logs.list',compact('error_logs'));
+    }
+
+
+    public function InformedErrors( )
+    {
+        $error_logs=ErrorLog::latest()->where('status','informed')->get();
+        return view('developer.Error_logs.list',compact('error_logs'));
+    }
+
+
+    public function IgnoredErrors( )
+    {
+        $error_logs=ErrorLog::latest()->where('status','ignore')->get();
+        return view('developer.Error_logs.list',compact('error_logs'));
+    }
+
+
+
 }

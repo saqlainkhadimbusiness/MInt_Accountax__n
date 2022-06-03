@@ -29,21 +29,22 @@
                                         </thead>
                                         <tbody>
                                         @foreach($error_logs as $key=>$error )
-                                            <tr>
+                                            <tr >
                                                 <td>
-                                                    {{$key+1}}
+                                                    <a href="{{route('developer.error_logs.show',$error->id,1)}}"><b >{{$error->id}}</b></a>
                                                 </td>
                                                 <td>{{$error->created_at->diffForHumans()}}</td>
                                                 <td>{{$error->current_url}}</td>
                                                 <td style="width: 300px; word-wrap: break-word;">{{$error->error_msg}}</td>
                                                 <td>
-                                                    <div class="badge badge-success badge-shadow">{{$error->status}}</div>
+                                                    <div class="badge @if($error->status=="fixed") badge-success @endif  @if($error->status=="new") badge-danger @endif  @if($error->status=="ignore")  badge-warning @endif    @if($error->status=="informed")  badge-secondary @endif  badge-shadow">{{$error->status}}</div>
                                                 </td>
                                                 <td style="width: 100px;">
-                                                    <select  class="form-control" style="width: 100px;">
-                                                        <option value="">Select Status</option>
+                                                    <select  class="form-control  error-status" data-id="{{$error->id}}"style="width: 100px;">
+                                                        <option value=""   >Select Status</option>
                                                         <option {{$error->status=="new"?"selected":''}} value="new" >New</option>
-                                                        <option {{$error->status=="fix"?"selected":''}} value="fix" >Fix</option>
+                                                        <option {{$error->status=="fixed"?"selected":''}} value="fixed" >Fixed</option>
+                                                        <option {{$error->status=="informed"?"selected":''}} value="informed" >Informed</option>
                                                         <option {{$error->status=="ignore"?"selected":''}} value="ignore"  >Ignore</option>
                                                     </select>
                                                 </td>
@@ -150,4 +151,27 @@
                 </div>
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+            $(document).ready( function () {
+                $(".error-status").change(function() {
+                    $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': "{{ csrf_token() }}"
+                        },
+
+                        url:'/developer/change_status',
+                        method: 'POST',
+                        data:{
+                            id:$(this).attr('data-id'),
+                            status:$(this).val(),
+                        },
+                        success: function(response) {
+                            // console.log(response);
+                        }
+                    });
+                } );
+            } );
+
+        </script>
 @endsection

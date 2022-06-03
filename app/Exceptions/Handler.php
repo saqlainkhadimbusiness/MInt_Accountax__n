@@ -50,9 +50,10 @@ class Handler extends ExceptionHandler
     public function render($request, Exception $exception, $status = 500)
     {
         $current_url = request()->url();
-        $route_count= count($current_url)-1;
-        $route= $route_count[3];
-        if(!isset($route)) {
+        $route_arr = explode("/", $current_url, 10);
+        $route3= (isset($route_arr[3]) &&  $route_arr[3])?$route_arr[3]:'';
+
+        if($route3!=='Res') {
             $previous = URL::previous();
             $request_param = json_encode(request()->all());
             $device = Agent::device();

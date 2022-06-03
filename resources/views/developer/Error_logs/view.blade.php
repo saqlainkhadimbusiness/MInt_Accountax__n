@@ -10,13 +10,28 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="invoice-title">
-                                    <h2>Error #{{$error->id}}</h2>
-                                    <div class="invoice-number"><div class="badge  @if($error->status=="fix") badge-success @endif  @if($error->status=="new") badge-danger @endif  @if($error->status=="ignore")  badge-warning @endif badge-shadow">{{$error->status}}</div> {{$error->created_at->DiffforHumans()}} </div>
+                                    <h2><div class="badge  @if($error->status=="fix") badge-success @endif  @if($error->status=="new") badge-danger @endif  @if($error->status=="ignore")  badge-warning @endif badge-shadow">Error #{{$error->id}}</div></h2>
+                                    <div class="invoice-number">
+                                        <div class="badge  @if($error->status=="fix") badge-success @endif  @if($error->status=="new") badge-danger @endif  @if($error->status=="ignore")  badge-warning @endif badge-shadow">{{$error->status}}</div> {{$error->created_at->DiffforHumans()}}
+                                    </div>
                                 </div>
                                 <hr>
 
-
-
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <form method="POST" action="/developer/change_status">
+                                            @csrf
+                                            <input type="hidden" name="id" value="{{$error->id}}">
+                                            <strong>Change Status</strong>
+                                            <select  onchange="this.form.submit()" class="form-control  error-status" name="status" data-link="/developer/change_status/{{$error->id}}"style="width: 100px;">
+                                                <option value=""   >Select Status</option>
+                                                <option {{$error->status=="new"?"selected":''}} value="new" >New</option>
+                                                <option {{$error->status=="fix"?"selected":''}} value="fix" >Fix</option>
+                                                <option {{$error->status=="ignore"?"selected":''}} value="ignore"  >Ignore</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                </div>
                                 <div class="row">
                                     <div class="col-md-3">
                                         <address>
@@ -147,25 +162,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <address>
-                                            <strong>Platform</strong><br>
-                                        </address>
-                                    </div>
-                                    <div class="col-md-6 ">
-                                        <address>
-                                            {{$error->platform}}:<br>
-                                        </address>
-                                    </div>
-                                </div>
-
-
-
                             </div>
                         </div>
                     </div>

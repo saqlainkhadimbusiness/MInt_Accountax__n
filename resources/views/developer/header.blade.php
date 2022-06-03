@@ -38,12 +38,12 @@
 
           </ul>
         </div>
-        <ul class="navbar-nav navbar-right">
+        {{--<ul class="navbar-nav navbar-right">
           <li class="dropdown"><a href="#" data-toggle="dropdown"
               class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="{{asset('Res/assets/img/user.png')}}"
                 class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
-              <a href="profile" class="dropdown-item has-icon"> <i class="far
+              <a href="" class="dropdown-item has-icon"> <i class="far
 										fa-user"></i> Profile
               </a>
               <div class="dropdown-divider"></div>
@@ -52,19 +52,19 @@
               </a>
             </div>
           </li>
-        </ul>
+        </ul>--}}
       </nav>
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index"> <img alt="image" src="{{asset('Res/assets/img/logo.png')}}" class="header-logo" /> <span
+            <a > <img alt="image" src="{{asset('Res/assets/img/logo.png')}}" class="header-logo" /> <span
                 class="logo-name">Welcome</span>
             </a>
           </div>
           <ul class="sidebar-menu">
             <li class="menu-header">Main</li>
             <li class="dropdown active">
-              <a href="index" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
+              <a href="{{route('developer.dashboard.index')}}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
             </li>
 
 {{--            <li class="dropdown">--}}
@@ -75,12 +75,16 @@
 {{--                </ul>--}}
 {{--            </li>--}}
 
-{{--            <li class="dropdown">--}}
-{{--              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="grid"></i><span>Student Table</span></a>--}}
-{{--              <ul class="dropdown-menu">--}}
-{{--                <li><a class="nav-link" href="datatables">Student Data Table</a></li>--}}
-{{--              </ul>--}}
-{{--            </li>--}}
+            <li class="dropdown active"   >
+              <a  class="menu-toggle nav-link has-dropdown"><i style="color: red;" class="fas fa-bug"></i><span>Error Logs</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="nav-link" href="{{route('developer.error_logs.index')}}">All</a></li>
+                <li><a class="nav-link"  href="/developer/NewErrors">New</a></li>
+                <li><a class="nav-link" href="/developer/FixedErrors">Fixed</a></li>
+                <li><a class="nav-link"  href="/developer/IgnoredErrors">Ignored</a></li>
+                <li><a class="nav-link"  href="/developer/InformedErrors">Informed</a></li>
+              </ul>
+            </li>
 
           </ul>
         </aside>
