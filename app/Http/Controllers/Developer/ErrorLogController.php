@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Developer;
 use App\ErrorLog;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class ErrorLogController extends Controller
 {
@@ -89,7 +90,8 @@ class ErrorLogController extends Controller
     public function changeStatus( Request $request)
     {
         $data=$request->all();
-        ErrorLog::latest()->where('id',$data['id'])->update(['status'=>$data['status']]);
+        dd($data);
+        DB::table('error_logs')->where('id',$data['id'])->update(['status'=>$data['status']]);
         return redirect(url()->previous());
     }
 

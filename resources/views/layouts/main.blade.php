@@ -4,7 +4,8 @@
     <title>@yield('title', config('app.name'))</title>
     <meta name="description" content="@yield('description', config('app.name'))">
     <meta name="keywords" content="@yield('keywords', '')">
-    {!! keywords(url()->current()) !!}3
+    {!! keywords(url()->current()) !!}
+    {!! Services_keywords(url()->current()) !!}
     {!! header_code(url()->current()) !!}
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">

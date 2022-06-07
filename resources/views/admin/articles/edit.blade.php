@@ -42,6 +42,11 @@
                 </div>
 
                 <div class="form-group pt-2">
+                  <label for="image_alt">Alt Keywords</label>
+                  <input class="form-control" id="image_alt" type="text" name="image_alt" placeholder="Enter Alt Keywords"  value="{{ $article->image_alt }}" required>
+                </div>
+
+                <div class="form-group pt-2">
                   <label for="meta_description">Meta Description</label>
                   <input class="form-control" id="meta_description" type="text" name="meta_description" placeholder="Enter Meta Description"  value="{{ $article->meta_description }}" required>
                 </div>

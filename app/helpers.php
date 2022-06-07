@@ -14,6 +14,9 @@ function keywords($route=''){
             $str.=(($key!=0)?',':'').$keyword->keyword;
         }
         $str.='">';
+        if(count($keywords) < 1){
+            return '';
+        }
         return $str;
     }
     else{
@@ -23,6 +26,9 @@ function keywords($route=''){
             $str.=(($key!=0)?',':'').$keyword->keyword;
         }
         $str.='">';
+        if(count($keywords) < 1){
+            return '';
+        }
         return $str;
     }
 }
@@ -55,6 +61,24 @@ function home_title(){
         return  $home->home_title;
     }
     else{
-        return "Welcome to Mint Accountax for Online Cheap Accountants UK";
+        return " ";
     }
+}
+function Services_keywords($route=''){
+
+    $route_arr = explode("/", $route, 10);
+    $route_count= count($route_arr)-1;
+    $route= $route_arr[$route_count];
+    if($route){
+        $keyword=\App\Service::where('slug',$route)->first();
+      if(isset($keyword->keywords_content)  && $keyword->keywords_content!='' ){
+          dd('isset true');
+          $str='<meta name="Keywords" content="';
+          $str.=$keyword->keywords_content;
+          $str.='">';
+          return $str;
+      }
+      return '';
+    }
+
 }

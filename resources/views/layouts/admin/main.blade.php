@@ -34,7 +34,7 @@
                     <div class="user-name">{{ Auth::user()->name }}</div>
                     <div class="user-position online">Available</div>
                   </div>
-                   <a class="dropdown-item" href="{{ route('developer.error_logs.index') }}"><span class="icon mdi mdi-face"></span>Developer Mode</a>
+                   <a class="dropdown-item" href="{{ '/developer/dashboard' }}"><span class="icon mdi mdi-face"></span>Developer Mode</a>
                   <a class="dropdown-item" href="{{ route('logout') }}"
                                                       onclick="event.preventDefault();
                                                       document.getElementById('logout-form').submit();">
