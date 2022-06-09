@@ -16,8 +16,8 @@ class CreateHomes extends Migration
 
         Schema::create('homes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('home_title')->nullable();
-            $table->string('home_title_desc')->nullable();
+            $table->string('meta_title')->nullable();
+            $table->string('meta_title_desc')->nullable();
             $table->string('slider_text_1')->nullable();
             $table->string('slider_text_2')->nullable();
             $table->string('slider_text_3')->nullable();
