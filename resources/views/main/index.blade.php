@@ -432,47 +432,7 @@
                     Posts</a></div>
 
     </section>
-    @if(isset($faqs) && count($faqs)> 0 )
-        <section id="faqs">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 offset-lg-2">
-                        <h1 class="text-center"><b>FAQ</b></h1>
 
-                        <div class="accordion mt-5" id="accordionExample">
-
-                            <div class="card">
-                                @php
-                                    $a=1;
-                                @endphp
-                                @foreach ($faqs as $key =>$show)
-                                    <div id="accordion">
-                                        <div class="card">
-                                            <div class="card-header" id="heading{{$key}}">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link collapsed"  style="word-wrap: break-word;white-space: normal;font-weight:bolder;" data-toggle="collapse" data-target="#collapse{{$key}}" aria-expanded="false" aria-controls="collapse{{$key}}">
-                                                        <b>  {{$show->Question}}</b>
-                                                    </button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapse{{$key}}" class="collapse" aria-labelledby="heading{{$key}}" data-parent="#accordion">
-                                                <div class="card-body">
-                                                    {{$show->Answer}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                @endforeach
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    @endif
 
     {{-- rffend --}}
     <section class="section section-lg bg-default">

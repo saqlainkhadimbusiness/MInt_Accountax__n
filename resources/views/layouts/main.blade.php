@@ -33,7 +33,10 @@
       @include('partials.header')
 
       @yield('content')
-      
+
+
+
+            {!! FAQs(url()->current()) !!}
       <footer class="section footer-2">
         <div class="container">
           <div class="row row-40">
