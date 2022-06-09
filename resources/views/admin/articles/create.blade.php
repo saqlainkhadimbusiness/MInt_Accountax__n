@@ -31,8 +31,8 @@
                 </div>
 
                 <div class="form-group pt-2">
-                  <input class="inputfile" id="file-2" type="file" name="image" accept="image/*">
-                  <label class="btn-primary" for="file-2"> <i class="mdi mdi-upload"></i><span>Browse Image</span></label>
+                  <input class="inputfile" id="company_image" type="file" name="company_image" accept="image/*">
+                  <label class="btn-primary" for="company_image"> <i class="mdi mdi-upload"></i><span>Browse Image</span></label>
                 </div>
 
                 <div class="form-group pt-2">
