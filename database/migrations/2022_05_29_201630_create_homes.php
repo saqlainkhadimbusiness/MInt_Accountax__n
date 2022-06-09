@@ -48,10 +48,10 @@ class CreateHomes extends Migration
             $table->string('services_slug_6')->nullable();
             $table->string('services_desc_6')->nullable();
             $table->string('company_heading')->nullable();
-            $table->string('company_heading_desc')->nullable();
+            $table->text('company_heading_desc')->nullable();
             $table->string('company_image')->nullable();
             $table->string('company_image_alt')->nullable();
-            $table->string('company_desc')->nullable();
+            $table->text('company_desc')->nullable();
             $table->string('company_item_1')->nullable();
             $table->string('company_item_per_1')->nullable();
             $table->string('company_item_2')->nullable();

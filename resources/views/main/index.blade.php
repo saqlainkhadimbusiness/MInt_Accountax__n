@@ -146,28 +146,22 @@
 <section class="section section-lg bg-gray-100">
    <div class="container">
       <div class="block-lg text-center">
-         <h2>A Few Words About Our Company</h2>
-         <p>Mint Accountax was originated in 2019 and introducing you to the next level of accounting assistances and
-            other advisories related to the financial system. Our main aim is the success of our clients including both
-            individual and company.</p>
+         <h2>{{isset($data->company_heading)?$data->company_heading:''}}</h2>
+         <p>{{isset($data->company_heading_desc)?$data->company_heading_desc:''}}</p>
       </div>
       <div class="row row-20 justify-content-center justify-content-lg-between">
-         <div class="col-md-10 col-lg-6 wow fadeIn"><img class="img-bordered" src="images/index-1-2-570x352.jpg" alt=""
+         <div class="col-md-10 col-lg-6 wow fadeIn"><img class="img-bordered" src="{{ url('uploaded/' . $data->company_image) }}" alt="{{isset($data->company_image_alt)?$data->company_image_alt:''}}"
                width="570" height="352" />
          </div>
          <div class="col-md-10 col-lg-6 col-xl-5">
             <div class="text-block-2">
-               <p>The value-based personal services are offering by us with almost all the proficiency for which a
-                  client expects from an accounting firm. We work with clients on all their personal and business
-                  aspects or portfolios. The business is precise and tenacious in meeting the prompt needs of customers
-                  and exercise premonition in anticipating any future assessment or other finance-related ramifications.
-               </p>
+               <p>{{isset($data->company_desc)?$data->company_desc:''}}</p>
                <div class="progress-linear-wrap">
                   <!-- Linear progress bar-->
                   <article class="progress-linear">
                      <div class="progress-header">
-                        <p>Accounting</p>
-                        <span class="progress-value">75</span>
+                        <p>{{isset($data->company_item_1)?$data->company_item_1:''}}</p>
+                        <span class="progress-value">{{isset($data->company_item_per_1)?$data->company_item_per_1:''}}</span>
                      </div>
                      <div class="progress-bar-linear-wrap">
                         <div class="progress-bar-linear"></div>
@@ -176,8 +170,8 @@
                   <!-- Linear progress bar-->
                   <article class="progress-linear">
                      <div class="progress-header">
-                        <p>Tax Advisory</p>
-                        <span class="progress-value">50</span>
+                        <p>{{isset($data->company_item_2)?$data->company_item_2:''}}</p>
+                        <span class="progress-value">{{isset($data->company_item_per_2)?$data->company_item_per_2:''}}</span>
                      </div>
                      <div class="progress-bar-linear-wrap">
                         <div class="progress-bar-linear"></div>

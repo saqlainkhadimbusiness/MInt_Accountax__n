@@ -81,13 +81,13 @@
 
                 <div class="form-group pt-2">
                   <label for="services_desc_2">services_desc_2</label>
-                  <input class="form-control" id="services_desc_2" type="text"  name="services_desc_2" placeholder="Enter services_desc_2" > {{isset($data->services_desc_2)?$data->services_desc_2:""}}
+                  <input class="form-control" id="services_desc_2" type="text"  name="services_desc_2" placeholder="Enter services_desc_2"  value="{{isset($data->services_desc_2)?$data->services_desc_2:""}}"  >
                 </div>
 
 
                 <div class="form-group pt-2">
                   <label for="services_icon_3">services_icon_3</label><a  style="float:right" target="_blank" href="https://linearicons.com/free">Get Icon HTML Code From here</a>
-                  <input class="form-control" id="services_icon_3" type="text"  name="services_icon_3" placeholder="Enter services_icon_3" > {{isset($data->services_icon_3)?$data->services_icon_3:""}}
+                  <input class="form-control" id="services_icon_3" type="text"  name="services_icon_3" placeholder="Enter services_icon_3" value=" {{isset($data->services_icon_3)?$data->services_icon_3:""}}">
                 </div>
 
                 <div class="form-group pt-2">
@@ -187,35 +187,35 @@
 
                 <div class="form-group pt-2">
                   <label for="company_desc">company_desc</label>
-                  <input class="form-control" id="company_desc" type="text"  name="company_desc" placeholder="Enter company_desc" > {{isset($data->company_desc)?$data->company_desc:""}}
+                  <input class="form-control" id="company_desc" type="text"  name="company_desc" placeholder="Enter company_desc" value="{{isset($data->company_desc)?$data->company_desc:""}}">
                 </div>
                 <div class="form-group pt-2">
                   <label for="company_item_1">company_item_1</label>
-                  <input class="form-control" id="company_item_1" type="text"  name="company_item_1" placeholder="Enter company_item_1" > {{isset($data->company_item_1)?$data->company_item_1:""}}
+                  <input class="form-control" id="company_item_1" type="text"  name="company_item_1" placeholder="Enter company_item_1" value=" {{isset($data->company_item_1)?$data->company_item_1:""}}">
                 </div>
                 <div class="form-group pt-2">
                   <label for="company_item_per_1">company_item_per_1</label>
-                  <input class="form-control" id="company_item_per_1" type="text"  name="company_item_per_1" placeholder="Enter company_item_per_1" > {{isset($data->company_item_per_1)?$data->company_item_per_1:""}}
+                  <input class="form-control" id="company_item_per_1" type="number" min="1"  max="100"  name="company_item_per_1" placeholder="Enter company_item_per_1" value="{{isset($data->company_item_per_1)?$data->company_item_per_1:""}}">
                 </div>
                 <div class="form-group pt-2">
                   <label for="company_item_2">company_item_2</label>
-                  <input class="form-control" id="company_item_2" type="text"  name="company_item_2" placeholder="Enter company_item_2" > {{isset($data->company_item_2)?$data->company_item_2:""}}
+                  <input class="form-control" id="company_item_2" type="text"  name="company_item_2" placeholder="Enter company_item_2" value=" {{isset($data->company_item_2)?$data->company_item_2:""}}">
                 </div>
                 <div class="form-group pt-2">
                   <label for="company_item_per_2">company_item_per_2</label>
-                  <input class="form-control" id="company_item_per_2" type="text"  name="company_item_per_2" placeholder="Enter company_item_per_2" > {{isset($data->company_item_per_2)?$data->company_item_per_2:""}}
+                  <input class="form-control" id="company_item_per_2" type="number"  min="1" max="100"   name="company_item_per_2" placeholder="Enter company_item_per_2" value="{{isset($data->company_item_per_2)?$data->company_item_per_2:""}}">
                 </div>
                 <div class="form-group pt-2">
                   <label for="success_heading">success_heading</label>
-                  <input class="form-control" id="success_heading" type="text"  name="success_heading" placeholder="Enter success_heading" > {{isset($data->success_heading)?$data->success_heading:""}}
+                  <input class="form-control" id="success_heading" type="text"  name="success_heading" placeholder="Enter success_heading" value=" {{isset($data->success_heading)?$data->success_heading:""}}">
                 </div>
                 <div class="form-group pt-2">
                   <label for="success_heading_desc">success_heading_desc</label>
-                  <input class="form-control" id="success_heading_desc" type="text"  name="success_heading_desc" placeholder="Enter success_heading_desc" > {{isset($data->success_heading_desc)?$data->success_heading_desc:""}}
+                  <input class="form-control" id="success_heading_desc" type="text"  name="success_heading_desc" placeholder="Enter success_heading_desc" value="{{isset($data->success_heading_desc)?$data->success_heading_desc:""}}">
                 </div>
                 <div class="form-group pt-2">
                   <label for="success_head_1">success_head_1</label>
-                  <input class="form-control" id="success_head_1" type="text"  name="success_head_1" placeholder="Enter success_head_1" > {{isset($data->success_head_1)?$data->success_head_1:""}}
+                  <input class="form-control" id="success_head_1" type="text"  name="success_head_1" placeholder="Enter success_head_1" value="{{isset($data->success_head_1)?$data->success_head_1:""}}">
                 </div>
                 <div class="form-group pt-2">
                   <label for="success_head_desc_1">success_head_desc_1</label>
