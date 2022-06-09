@@ -18,20 +18,16 @@ class HomeController extends Controller
   } 
   public function store(Request $request)
   {
-    $home= home::where('id',1)->first();
-    if(isset($home) && $home){
-      $home->services_content = $request->input('services');
-      $home->home_title = $request->input('home_title');
-      $home->save();
-    
-    }else{
-      $home= new home();
-      $home->services_content = $request->input('services');
-      $home->home_title = $request->input('home_title');
-      $home->save();
-
-     }
-   
-        return redirect(route('admin.home.index'));
+      $request_data = $request->all();
+      $image=$request->image;
+      if(isset( $image)){
+          $request_data['company_image'] = request('image')->store('home');
+      }
+      unset($request_data['_token']);
+      unset($request_data['image']);
+      $home= home::where('id',1)->update(
+        $request_data
+    );
+      return redirect(route('admin.home.index'));
   }
 }

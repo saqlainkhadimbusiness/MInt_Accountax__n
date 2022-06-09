@@ -1,9 +1,7 @@
 @extends('layouts.main')
 
 @section('title', home_title())
-@section('description',
-    'MintAccountax providing online accountants, Tax, and other legal & financial services at
-    affordable prices. Hurry Up, save your taxes now and grow your business in UK.')
+@section('description',home_title_desc())
 
 @section('content')
 
@@ -14,15 +12,15 @@
                 <div class="swiper-slide-caption">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-10 col-lg-8">
-                                <h1 data-caption-animate="fadeInUp" data-caption-delay="100"><span
+                            <div class="col-md-10 col-lg-8">{!! isset($data->slider_text_1)?$data->slider_text_1:"" !!}
+{{--                                <h1 data-caption-animate="fadeInUp" data-caption-delay="100"><span
                                         class="font-weight-medium">Professional Accounting</span> <br> & Taxation Services
                                 </h1>
                                 <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250"
                                     style="max-width: 600px">
                                     Mint Accountax is a leading comapny providing high quality accounting & tax services in
                                     UK.</p>
-                                <br><br>
+                                <br><br>--}}
                             </div>
                         </div>
                     </div>
@@ -33,13 +31,13 @@
                 <div class="swiper-slide-caption">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-10 col-lg-6">
-                                <h1 data-caption-animate="fadeInUp" data-caption-delay="100"><span
+                            <div class="col-md-10 col-lg-6">{!! isset($data->slider_text_2)?$data->slider_text_2:'' !!}
+                                {{--<h1 data-caption-animate="fadeInUp" data-caption-delay="100"><span
                                         class="font-weight-medium">Quality Tax Help </span> for Your Business</h1>
                                 <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250">Our team
                                     is ready to offer
                                     you consulting & any necessary help with your company’s taxation.</p>
-                                <br><br>
+                                <br><br>--}}
                             </div>
                         </div>
                     </div>
@@ -50,15 +48,15 @@
                 <div class="swiper-slide-caption">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-10 col-lg-8">
-                                <h1 data-caption-animate="fadeInUp" data-caption-delay="100"><span
+                            <div class="col-md-10 col-lg-8">{!! isset($data->slider_text_3)?$data->slider_text_3:'' !!}
+                                {{--<h1 data-caption-animate="fadeInUp" data-caption-delay="100"><span
                                         class="font-weight-medium">Helping You Manage </span> Your Business Finance</h1>
                                 <p class="lead" data-caption-animate="fadeInUp" data-caption-delay="250"
                                     style="max-width: 700px">
                                     Since its establishment, Mint Accountax provides accounting assistance to companies of
                                     any size
                                     all over the UK.</p>
-                                <br><br>
+                                <br><br>--}}
                             </div>
                         </div>
                     </div>
@@ -93,9 +91,8 @@
 <section class="section section-lg">
    <div class="container">
       <div class="block-lg text-center">
-         <h2>Our Services</h2>
-          <?php $lorem='Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.';?>
-         <p>{{isset($data->services_content)?$data->services_content:$lorem}}</p>
+         <h2>{{--Our Services--}}{{ isset($data->services_heading)?$data->services_heading:'' }}</h2>
+         <p>{{isset($data->services_desc)?$data->services_desc:''}}</p>
        
       </div>
     
@@ -103,8 +100,8 @@
          <div class="col-sm-6 col-md-4 wow fadeInLeft">
             <div class="blurb-image">
                <div class="icon linearicons-book2"></div>
-               <h6 class="title"><a href="https://www.mintaccountax.co.uk/bookkeeping-services">Bookkeeping</a></h6>
-               <p class="exeption">Your accounts are handled and you are provided financial details.</p>
+               <h6 class="title"><a href="https://www.mintaccountax.co.uk/{{isset($data->services_slug_1)?$data->services_slug_1:''}}">{{isset($data->services_heading_1)?$data->services_heading_1:''}}<!--Bookkeeping--></a></h6>
+               <p class="exeption">{{isset($data->services_desc_1)?$data->services_desc_1:''}}{{--Your accounts are handled and you are provided financial details--}}.</p>
             </div>
          </div>
          <div class="col-sm-6 col-md-4 wow fadeInLeft" data-wow-delay="0.1s">

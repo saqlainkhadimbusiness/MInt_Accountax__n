@@ -58,8 +58,17 @@ function header_code($route=''){
 
 function home_title(){
     $home= home::where('id',1)->first();
-    if(isset($home) &&  $home->home_title ){
-        return  $home->home_title;
+    if(isset($home) &&  $home->meta_title ){
+        return  $home->meta_title;
+    }
+    else{
+        return " ";
+    }
+}
+function home_title_desc(){
+    $home= home::where('id',1)->first();
+    if(isset($home) &&  $home->meta_title_desc ){
+        return  $home->meta_title_desc;
     }
     else{
         return " ";
