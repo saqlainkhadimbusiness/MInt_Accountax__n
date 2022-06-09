@@ -99,47 +99,44 @@
       <div class="row row-50 row-xxl-73">
          <div class="col-sm-6 col-md-4 wow fadeInLeft">
             <div class="blurb-image">
-               <div class="icon linearicons-book2"></div>
+               <div class="icon {{isset($data->services_icon_1)?$data->services_icon_1:''}}"></div>
                <h6 class="title"><a href="https://www.mintaccountax.co.uk/{{isset($data->services_slug_1)?$data->services_slug_1:''}}">{{isset($data->services_heading_1)?$data->services_heading_1:''}}<!--Bookkeeping--></a></h6>
                <p class="exeption">{{isset($data->services_desc_1)?$data->services_desc_1:''}}{{--Your accounts are handled and you are provided financial details--}}.</p>
             </div>
          </div>
          <div class="col-sm-6 col-md-4 wow fadeInLeft" data-wow-delay="0.1s">
             <div class="blurb-image">
-               <div class="icon linearicons-bubbles"></div>
-               <h6 class="title"><a href="https://www.mintaccountax.co.uk/annual-accounts">Annual Accounts</a></h6>
-               <p class="exeption">We are eager to offer clients recognized profitable opportunities by avoiding costly
-                  problems.</p>
+               <div class="icon  {{isset($data->services_icon_2)?$data->services_icon_2:''}}"></div>
+               <h6 class="title"><a href="https://www.mintaccountax.co.uk/{{isset($data->services_slug_2)?$data->services_slug_2:''}}">{{isset($data->services_heading_2)?$data->services_heading_2:''}}</a></h6>
+               <p class="exeption">{{isset($data->services_desc_2)?$data->services_desc_2:''}}</p>
             </div>
          </div>
          <div class="col-sm-6 col-md-4 wow fadeInLeft" data-wow-delay="0.2s">
             <div class="blurb-image">
-               <div class="icon linearicons-bubble-text"></div>
-               <h6 class="title"><a href="https://www.mintaccountax.co.uk/business-consulting-services">Small Business
-                     Consultation</a></h6>
-               <p class="exeption">We help your business to grow on its potential growth</p>
+                <div class="icon  {{isset($data->services_icon_3)?$data->services_icon_3:''}}"></div>
+                <h6 class="title"><a href="https://www.mintaccountax.co.uk/{{isset($data->services_slug_3)?$data->services_slug_3:''}}">{{isset($data->services_heading_3)?$data->services_heading_3:''}}</a></h6>
+                <p class="exeption">{{isset($data->services_desc_3)?$data->services_desc_3:''}}</p>
             </div>
          </div>
          <div class="col-sm-6 col-md-4 wow fadeInLeft" data-wow-delay="0.1s">
             <div class="blurb-image">
-               <div class="icon linearicons-document"></div>
-               <h6 class="title"><a href="https://www.mintaccountax.co.uk/payroll-services">Payroll Services</a></h6>
-               <p class="exeption">A personalized payroll system is developed for the convenience of the clients.</p>
+                <div class="icon  {{isset($data->services_icon_4)?$data->services_icon_4:''}}"></div>
+                <h6 class="title"><a href="https://www.mintaccountax.co.uk/{{isset($data->services_slug_4)?$data->services_slug_4:''}}">{{isset($data->services_heading_4)?$data->services_heading_4:''}}</a></h6>
+                <p class="exeption">{{isset($data->services_desc_4)?$data->services_desc_4:''}}</p>
             </div>
          </div>
          <div class="col-sm-6 col-md-4 wow fadeInLeft" data-wow-delay="0.2s">
             <div class="blurb-image">
-               <div class="icon linearicons-calculator"></div>
-               <h6 class="title">Tax Preparation & Consultation</h6>
-               <p class="exeption">Get your personal and business tax returns from the professional and licensed tax
-                  preparers.</p>
+                <div class="icon  {{isset($data->services_icon_5)?$data->services_icon_5:''}}"></div>
+                <h6 class="title"><a href="https://www.mintaccountax.co.uk/{{isset($data->services_slug_5)?$data->services_slug_5:''}}">{{isset($data->services_heading_5)?$data->services_heading_5:''}}</a></h6>
+                <p class="exeption">{{isset($data->services_desc_5)?$data->services_desc_5:''}}</p>
             </div>
          </div>
          <div class="col-sm-6 col-md-4 wow fadeInLeft" data-wow-delay="0.3s">
             <div class="blurb-image">
-               <div class="icon linearicons-cog"></div>
-               <h6 class="title">Other Services</h6>
-               <p class="exeption">For a variety of other financial advisory assistance join our team today.</p>
+                <div class="icon  {{isset($data->services_icon_6)?$data->services_icon_6:''}}"></div>
+                <h6 class="title"><a href="https://www.mintaccountax.co.uk/{{isset($data->services_slug_6)?$data->services_slug_6:''}}">{{isset($data->services_heading_6)?$data->services_heading_6:''}}</a></h6>
+                <p class="exeption">{{isset($data->services_desc_6)?$data->services_desc_6:''}}</p>
             </div>
          </div>
       </div>
