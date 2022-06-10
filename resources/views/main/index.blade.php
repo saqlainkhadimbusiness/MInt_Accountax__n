@@ -298,45 +298,30 @@
 
     <section class="section section-lg" id="what-we-do">
         <div class="container">
-            <h2 class="text-center">The New Way to <span class="button button-primary">SUCCESS.</span></h2>
-            <p class="text-center text-muted h5">Success through timely management reports.</p>
-            <p class="text-center text-muted h5">Progress through better control on cash flows</p>
-            <p class="text-center text-muted h5">Protective from tax authorities through exceptional tax planning</p>
+            <h2 class="text-center">{{isset($data->success_heading)?$data->success_heading:''}} <span class="button button-primary">SUCCESS.</span></h2>
+            {{isset($data->success_heading_desc)?$data->success_heading_desc:''}}
             <div class="row mt-5">
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <div class="card">
                         <div class="card-block block-1">
-                            <h3 class="card-title">Fixed Fee</h3>
-                            <ul>
-                                <li> We charge monthly with no hidden or surprise payments.</li>
-                                <li> Possible to increase over a period of one year.</li>
-                            </ul>
+                            <h3 class="card-title">{{isset($data->success_head_1)?$data->success_head_1:''}}</h3>
+                            {{isset($data->success_head_desc_1)?$data->success_head_desc_1:''}}
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <div class="card">
                         <div class="card-block block-2">
-                            <h3 class="card-title">Fast Support</h3>
-                            <ul>
-                                <li> Get instant support when you need</li>
-                                <li> Quick chat and call back availability</li>
-                                <li> Designated account of your own</li>
-                                <li> Support through a direct and friendly approach</li>
-                            </ul>
+                            <h3 class="card-title">{{isset($data->success_head_2)?$data->success_head_2:''}}</h3>
+                            {{isset($data->success_head_desc_2)?$data->success_head_2:''}}
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <div class="card">
                         <div class="card-block block-3">
-                            <h3 class="card-title">Cloud-Based Accounting</h3>
-                            <ul>
-                                <li> Online accounts with 24/7 accessibility</li>
-                                <li> Easy to use software</li>
-                                <li> Inclusive training conferences</li>
-                                <li> Xero, Saga</li>
-                            </ul>
+                            <h3 class="card-title">{{isset($data->success_head_3)?$data->success_head_3:''}}</h3>
+                            {{isset($data->success_head_desc_3)?$data->success_head_desc_3:''}}
                         </div>
                     </div>
                 </div>
@@ -345,36 +330,24 @@
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <div class="card">
                         <div class="card-block block-4">
-                            <h3 class="card-title">Real Time Pricing</h3>
-                            <ul>
-                                <li> Fast calculation of fee</li>
-                                <li> Quick reply by email</li>
-                                <li> Fee negotiation competence with 24/7 accessibility</li>
-                            </ul>
+                            <h3 class="card-title">{{isset($data->success_head_4)?$data->success_head_4:''}}</h3>
+                            {{isset($data->success_head_desc_4)?$data->success_head_desc_4:''}}
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <div class="card">
                         <div class="card-block block-5">
-                            <h3 class="card-title">Trade Mark Registration</h3>
-                            <ul>
-                                <li> Absolute application procedure handling</li>
-                                <li> Communication through IPO</li>
-                                <li> Business standard recognition</li>
-                            </ul>
+                            <h3 class="card-title">{{isset($data->success_head_5)?$data->success_head_5:''}}</h3>
+                            {{isset($data->success_head_desc_5)?$data->success_head_desc_5:''}}
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <div class="card">
                         <div class="card-block block-6">
-                            <h3 class="card-title">Company Address Service</h3>
-                            <ul>
-                                <li> Implicit Office Address</li>
-                                <li> Mail Sending Address</li>
-                                <li> Indexed Office Address</li>
-                            </ul>
+                            <h3 class="card-title">{{isset($data->success_head_6)?$data->success_head_6:''}}</h3>
+                            {{isset($data->success_head_desc_6)?$data->success_head_desc_6:''}}
                         </div>
                     </div>
                 </div>
