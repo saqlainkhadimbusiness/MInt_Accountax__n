@@ -80,7 +80,7 @@
                 </div>
 
                 <div class="form-group pt-2">
-                  <label for="services_desc_2">v Service description</label>
+                  <label for="services_desc_2">3rd Service description</label>
                   <input class="form-control" id="services_desc_2" type="text"  name="services_desc_2" placeholder="Enter 2nd Service description"  value="{{isset($data->services_desc_2)?$data->services_desc_2:""}}"  >
                 </div>
 
@@ -211,7 +211,8 @@
                 </div>
                 <div class="form-group pt-2">
                   <label for="success_heading_desc">Success Section heading description</label>
-                  <input class="form-control" id="success_heading_desc" type="text"  name="success_heading_desc" placeholder="Enter Success Section heading description" value="{{isset($data->success_heading_desc)?$data->success_heading_desc:""}}">
+                    <textarea class="form-control ckeditor" id="success_heading_desc" type="text"  name="success_heading_desc" placeholder="Enter 1st Success section heading description" > {{isset($data->success_heading_desc)?$data->success_heading_desc:""}}</textarea>
+{{--                  <input class="form-control" id="success_heading_desc" type="text"  name="success_heading_desc" placeholder="Enter Success Section heading description" value="{{isset($data->success_heading_desc)?$data->success_heading_desc:""}}">--}}
                 </div>
                 <div class="form-group pt-2">
                   <label for="success_head_1">1st Success section heading</label>
@@ -223,7 +224,7 @@
                 </div>
                 <div class="form-group pt-2">
                   <label for="success_head_2">2nd Success section heading</label>
-                  <input class="form-control" id="success_head_2" type="text"  name="success_head_2" placeholder="Enter 2nd Success section heading" > {{isset($data->success_head_2)?$data->success_head_2:""}}
+                  <input class="form-control" id="success_head_2" type="text"  name="success_head_2" placeholder="Enter 2nd Success section heading" value=" {{isset($data->success_head_2)?$data->success_head_2:""}}">
                 </div>
                 <div class="form-group pt-2">
                   <label for="success_head_desc_2">2nd Success section heading description</label>
@@ -231,7 +232,7 @@
                 </div>
                 <div class="form-group pt-2">
                   <label for="success_head_3">3rd Success section heading</label>
-                  <input class="form-control" id="success_head_3" type="text"  name="success_head_3" placeholder="Enter 3rd Success section heading" > {{isset($data->success_head_3)?$data->success_head_3:""}}
+                  <input class="form-control" id="success_head_3" type="text"  name="success_head_3" placeholder="Enter 3rd Success section heading" value=" {{isset($data->success_head_3)?$data->success_head_3:""}}">
                 </div>
                 <div class="form-group pt-2">
                   <label for="success_head_desc_3">3rd Success section heading description</label>
@@ -239,7 +240,7 @@
                 </div>
                 <div class="form-group pt-2">
                   <label for="services">4th Success section heading</label>
-                  <input class="form-control" id="success_head_4" type="text"  name="success_head_4" placeholder="Enter 4th Success section heading" > {{isset($data->success_head_4)?$data->success_head_4:""}}
+                  <input class="form-control" id="success_head_4" type="text"  name="success_head_4" placeholder="Enter 4th Success section heading" value=" {{isset($data->success_head_4)?$data->success_head_4:""}}">
                 </div>
                 <div class="form-group pt-2">
                   <label for="success_head_desc_4">4th Success section heading description</label>
@@ -247,7 +248,7 @@
                 </div>
                 <div class="form-group pt-2">
                   <label for="success_head_5">5th Success section heading</label>
-                  <input class="form-control" id="success_head_5" type="text"  name="success_head_5" placeholder="Enter 5th Success section heading" > {{isset($data->success_head_5)?$data->success_head_5:""}}
+                  <input class="form-control" id="success_head_5" type="text"  name="success_head_5" placeholder="Enter 5th Success section heading" value="{{isset($data->success_head_5)?$data->success_head_5:""}}">
                 </div>
                 <div class="form-group pt-2">
                   <label for="success_head_desc_5">5th Success section heading description</label>
@@ -256,7 +257,7 @@
 
                 <div class="form-group pt-2">
                   <label for="success_head_6">6th Success section heading</label>
-                  <input class="form-control" id="success_head_6" type="text"  name="success_head_6" placeholder="Enter 6th Success section heading" > {{isset($data->success_head_6)?$data->success_head_6:""}}
+                  <input class="form-control" id="success_head_6" type="text"  name="success_head_6" placeholder="Enter 6th Success section heading" value="{{isset($data->success_head_6)?$data->success_head_6:""}}">
                 </div>
                 <div class="form-group pt-2">
                   <label for="success_head_desc_6">6th Success section heading description</label>

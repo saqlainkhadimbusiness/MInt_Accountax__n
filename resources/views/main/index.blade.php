@@ -299,13 +299,14 @@
     <section class="section section-lg" id="what-we-do">
         <div class="container">
             <h2 class="text-center">{{isset($data->success_heading)?$data->success_heading:''}} <span class="button button-primary">SUCCESS.</span></h2>
-            {{isset($data->success_heading_desc)?$data->success_heading_desc:''}}
+            {!!  isset($data->success_heading_desc)?$data->success_heading_desc:'' !!}
+
             <div class="row mt-5">
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
                     <div class="card">
                         <div class="card-block block-1">
                             <h3 class="card-title">{{isset($data->success_head_1)?$data->success_head_1:''}}</h3>
-                            {{isset($data->success_head_desc_1)?$data->success_head_desc_1:''}}
+                            {!! isset($data->success_head_desc_1)?$data->success_head_desc_1:'' !!}
                         </div>
                     </div>
                 </div>
@@ -313,7 +314,7 @@
                     <div class="card">
                         <div class="card-block block-2">
                             <h3 class="card-title">{{isset($data->success_head_2)?$data->success_head_2:''}}</h3>
-                            {{isset($data->success_head_desc_2)?$data->success_head_2:''}}
+                            {!! isset($data->success_head_desc_2)?$data->success_head_desc_2:'' !!}
                         </div>
                     </div>
                 </div>
@@ -321,7 +322,7 @@
                     <div class="card">
                         <div class="card-block block-3">
                             <h3 class="card-title">{{isset($data->success_head_3)?$data->success_head_3:''}}</h3>
-                            {{isset($data->success_head_desc_3)?$data->success_head_desc_3:''}}
+                            {!! isset($data->success_head_desc_3)?$data->success_head_desc_3:'' !!}
                         </div>
                     </div>
                 </div>
@@ -331,7 +332,7 @@
                     <div class="card">
                         <div class="card-block block-4">
                             <h3 class="card-title">{{isset($data->success_head_4)?$data->success_head_4:''}}</h3>
-                            {{isset($data->success_head_desc_4)?$data->success_head_desc_4:''}}
+                            {!! isset($data->success_head_desc_4)?$data->success_head_desc_4:'' !!}
                         </div>
                     </div>
                 </div>
@@ -339,7 +340,7 @@
                     <div class="card">
                         <div class="card-block block-5">
                             <h3 class="card-title">{{isset($data->success_head_5)?$data->success_head_5:''}}</h3>
-                            {{isset($data->success_head_desc_5)?$data->success_head_desc_5:''}}
+                            {!! isset($data->success_head_desc_5)?$data->success_head_desc_5:'' !!}
                         </div>
                     </div>
                 </div>
@@ -347,7 +348,7 @@
                     <div class="card">
                         <div class="card-block block-6">
                             <h3 class="card-title">{{isset($data->success_head_6)?$data->success_head_6:''}}</h3>
-                            {{isset($data->success_head_desc_6)?$data->success_head_desc_6:''}}
+                            {!! isset($data->success_head_desc_6)?$data->success_head_desc_6:'' !!}
                         </div>
                     </div>
                 </div>

@@ -57,7 +57,7 @@ class CreateHomes extends Migration
             $table->string('company_item_2')->nullable();
             $table->string('company_item_per_2')->nullable();
             $table->string('success_heading')->nullable();
-            $table->string('success_heading_desc')->nullable();
+            $table->text('success_heading_desc')->nullable();
             $table->string('success_head_1')->nullable();
             $table->text('success_head_desc_1')->nullable();
             $table->string('success_head_2')->nullable();
